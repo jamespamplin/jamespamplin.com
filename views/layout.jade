@@ -1,0 +1,40 @@
+title = title || meta && meta.name
+schema = meta && meta['@type'] || 'http://schema.org/WebPage'
+
+!!!
+html
+	head
+		title #{title} - JamesPamplin.com
+		block head
+			link(rel='stylesheet', href='/styles/style.css')
+
+	body(itemtype=schema, itemscope)
+		.body
+			header
+				h1(itemprop="name")
+					a.title(href="/", title="JamesPamplin.com")
+						span.first-name James
+						span.last-name Pamplin
+
+					a.subtitle(itemprop="headline", href="/") About me
+
+
+			article.content
+				block content
+
+			footer.footer
+				p
+					| Website running on&nbsp;
+					a(href="http://nodejs.org/") node.js
+					| &nbsp;with&nbsp;
+					a(href="http://expressjs.com/") Express
+					| ,&nbsp;
+					a(href="http://jade-lang.com/") Jade
+					| &nbsp;and&nbsp;
+					a(href="http://learnboost.github.com/stylus/") Stylus
+					| .
+
+
+
+
+

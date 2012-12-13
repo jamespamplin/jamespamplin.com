@@ -1,0 +1,73 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway:600')
+
+// --------- Main layout ---------
+
+body
+	font-size 62.5% // 10px base font size
+	font-family Helvetica, sans-serif
+	color #444
+	background-color #fff
+	margin 0 1.6em
+	padding 0
+
+
+.body
+	min-width 26em
+	max-width 60em
+	margin 1em auto
+
+
+header h1
+	font-family 'Raleway', sans-serif
+	font-weight 600
+	font-size 6.4em
+	line-height 1em
+	margin 0
+	padding 0
+	text-transform lowercase
+	letter-spacing -3px
+	overflow hidden
+
+a.title
+	text-decoration none
+	display block
+	height 1.6em
+
+	& .first-name
+		display block
+		color #927fbf
+		text-shadow 0.025em 0.025em 0.025em #6e55a9
+		position relative
+		top -0.3em
+
+	& .last-name
+		display block
+		color #271C48
+		text-shadow 0.025em 0.025em 0.025em #6448b8
+		position relative
+		top -0.5em
+		left 0.2em
+
+a.subtitle
+	text-decoration none
+	font-size 0.5em
+
+.hide
+	position absolute
+	left -999em
+	width 1em
+	overflow hidden
+
+// About page
+.vcard
+	position relative
+
+	& .photo
+		position absolute
+		top 0
+		right 0
+		width 160px
+
+dl
+	font-size 1.3em
+

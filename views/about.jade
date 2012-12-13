@@ -1,0 +1,69 @@
+extend layout
+
+mixin item(key, className)
+	- var itemClass = className || key
+	- var value = meta.about[key]
+	case key
+		when 'email'
+			a(itemprop=key, class=itemClass, href="mailto:"+value)= value
+		when 'photo'
+			img(itemprop=key, class=itemClass, src=value)
+		default
+			div(itemprop=key, class=itemClass)= value
+
+block append head
+	link(rel="profile", href="http://microformats.org/profile/hcard")
+
+
+block content
+
+
+	aside.vcard(itemtype="http://schema.org/Person", itemscope)
+		dl
+			dt Name:
+			dd.fn(itemprop="name")
+				span.given-name= meta.about.givenName
+				| &nbsp;
+				span.family-name= meta.about.familyName
+
+			dt Email
+			dd
+				mixin item('email')
+
+			dt Website
+			dd
+				a.url(itemprop="url", href="http://www.jamespamplin.com/") www.jamespamplin.com
+
+
+			dt Nickname
+			dd.nickname(itemprop="nickname") pampo
+
+			dt.hide Photo
+			dd
+				img.photo(itemprop="photo", alt="Photo", src="http://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=320")
+
+			dt Gender
+			dd.gender(itemprop="gender") Male
+
+			dt Locality
+			dd.adr
+				span.locality London
+				| ,&nbsp;
+				span.country-name UK
+
+			dt Work
+			dd
+				span.role(itemprop="jobTitle") Senior Web Developer
+				| &nbsp;-&nbsp;
+				a.org(rel="affiliation", href="http://www.bbc.co.uk/") BBC
+
+
+			dt Birth date
+			dd
+				time.bday(itemprop="birthDate", datetime="1984-08-14") 14 August 1984
+
+	section
+		h2 Web Development
+
+	section
+		h2 About me
