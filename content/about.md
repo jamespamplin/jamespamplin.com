@@ -12,13 +12,10 @@ James has a strong focus on Semantic markup and clean, testable yet efficient co
 
 
 ### Skills
-Advanced JavaScript development client and server side.
-
- - Asynchronous Modular design with RequireJS, Object Oriented design, Closures.
- - jQuery, YUI, BBC glow, Pub-Sub events.
- - Test-Driven Development and Behaviour Driven Development with Cucumber, Jasmine, and QUnit.
- - Node.js with Grunt, Express and Jade.
-
-Semantic HTML5 and CSS3. Responsive Design with Progressive Enhancement.
-
-Object Oriented PHP and Test-Driven development using PHPUnit.
+ - Advanced JavaScript development client and server side.
+   - Asynchronous Modular design with RequireJS, Object Oriented design, Closures.
+   - jQuery, YUI, BBC glow, Pub-Sub events.
+   - Test-Driven Development and Behaviour Driven Development with Cucumber, Jasmine, and QUnit.
+   - Node.js with Express, Jade and Grunt.
+ - Semantic HTML5 and CSS3. Responsive Design with Progressive Enhancement.
+ - Object Oriented PHP and Test-Driven development using PHPUnit.

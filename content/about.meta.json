@@ -1,8 +1,8 @@
 {
     "@type": "http://schema.org/AboutPage",
-    "name": "About",
+    "name": "About me",
     "url": "http://www.jamespamplin.com/about",
-    "about": {
+    "creator": {
         "@type": "http://schema.org/Person",
         "address": {
             "@type": "http://schema.org/PostalAddress",
