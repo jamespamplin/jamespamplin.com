@@ -12,9 +12,9 @@
     "start": "node web.js"
   },
   "dependencies": {
-    "express": "3.x",
+    "express": "~3.2.6",
     "jade": "~0.31.2",
-    "stylus": "*",
+    "stylus": "~0.32.1",
     "nib": "*",
     "marked": "~0.2.9"
   },
