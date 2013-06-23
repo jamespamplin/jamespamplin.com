@@ -1,15 +1,21 @@
 {
-  "name": "jamespamplin.com",
-  "version": "0.0.2",
-  "private": "true",
-  "dependencies": {
-    "express": "3.x",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*"
-  },
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
-  }
+    "name": "jamespamplin.com",
+    "author": {
+        "name": "James Pamplin",
+        "email": "james@jamespamplin.com",
+        "url": "http://www.jamespamplin.com"
+    },
+    "homepage": "http://www.jamespamplin.com",
+    "version": "0.0.2",
+    "private": "true",
+    "dependencies": {
+        "express": "3.x",
+        "jade": "*",
+        "stylus": "*",
+        "nib": "*"
+    },
+    "engines": {
+        "node": "0.8.x",
+        "npm": "1.1.x"
+    }
 }
