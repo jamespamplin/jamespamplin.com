@@ -49,14 +49,14 @@ a.title
 	display block
 	height 1.6em
 
-	& .first-name
+	.first-name
 		display block
 		color #927fbf
 		text-shadow 0.025em 0.025em 0.025em #6e55a9
 		position relative
 		top -0.3em
 
-	& .last-name
+	.last-name
 		display block
 		color #271C48
 		text-shadow 0.025em 0.025em 0.025em #6448b8
@@ -74,17 +74,36 @@ a.subtitle
 	width 1em
 	overflow hidden
 
+
 // About page
 .vcard
+	dl
+		font-size 1.5em
 
-	& .photo
+	dt
+		float left
+		font-weight bold
+		clear left
+		width 8em
+
+	dd
+		float left
+
+	dt, dd
+		line-height 1.4em
+		margin 0 0 0.6em
+
+
+	.photo
 		position absolute
 		top 1.6em
 		right 0
 		width 160px
 
-dl
-	font-size 1.3em
+	i // icons
+		text-decoration none
+		color #271C48
+		margin-right 0.3em
 
 .content
 	p, ul
@@ -100,6 +119,9 @@ dl
 		list-style-type square
 		margin 0 0 0 2em
 		padding 0
+
+	a
+		color #6e55a9
 
 @media (max-width: 480px)
 	.vcard .photo

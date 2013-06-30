@@ -2,17 +2,6 @@ extend layout
 
 
 
-mixin item(key, className)
-    - var itemClass = className || key
-    - var value = meta.creator[key]
-    case key
-        when 'email'
-            a(itemprop=key, class=itemClass, href="mailto:"+value)= value
-        when 'photo'
-            img(itemprop=key, class=itemClass, src=value)
-        default
-            div(itemprop=key, class=itemClass)= value
-
 mixin itemValue(value, prop)
     case prop
         when 'name'
@@ -28,22 +17,30 @@ mixin itemValue(value, prop)
                 span.country-name(itemprop="addressCountry")= value.addressCountry
 
         when 'url'
-            a(class=prop, href=value)= value
+            //- display just domain host
+            a(class=prop, href=value)= value.replace(/^https?:\/\/([^\/]+).*$/, '$1')
 
         when 'email'
-            i.icon-envelope
-            a(class=prop, href="mailto:"+value)= value
+
+            a(class=prop, href="mailto:"+value)
+                i.icon-large.icon-envelope
+                | #{value}
 
         when 'image'
-            img.photo(alt="Photo", src=value)
+            img.photo(itemprop=prop, alt="Photo", src=value)
 
         when 'birthDate'
-            time.bday(datetime=value) 14 August 1984
+            time.bday(itemprop=prop, datetime=value) 14 August 1984
 
         default
             if typeof value == 'object'
                 if value.url
-                    a(href=value.url)= value.name || value.url
+                    a(itemprop="url", href=value.url)
+                        if value.name
+                            span(itemprop="name")= value.name
+
+                        else
+                            | #{value.url}
 
                 else if value.name
                     span(itemprop="name")= value.name
@@ -53,17 +50,22 @@ mixin itemValue(value, prop)
 
 
 
-mixin definition_meta(value, prop)
-    propLabels = { '@type': false, 'birthDate': 'Birth date', 'allumniOf': 'Allumni of', 'image': 'Photo', 'givenName': false, 'url': 'Website', 'familyName': false, 'jobTitle': 'Job title', 'worksFor': 'Works for' }
+mixin itemDefinition(value, prop)
+    propLabels = { '@type': false, 'birthDate': 'Birth date', 'address': 'Locality', 'allumniOf': 'Allumni of', 'image': 'Photo', 'givenName': false, 'url': 'Website', 'familyName': false, 'jobTitle': 'Job title', 'worksFor': 'Works for' }
     classMap = { 'birthDate': false, 'address': 'adr', 'image': false, 'name': 'fn', 'jobTitle': 'role', 'worksFor': 'org' }
 
+    itemTermClass = prop == 'image' && 'hide' || ''
     itemClass = classMap[prop] !== false && (classMap[prop] || prop) || ''
 
     unless propLabels[prop] === false
-        dt= propLabels[prop] || prop.charAt(0).toUpperCase() + prop.substr(1)
+        dt(class=itemTermClass)= propLabels[prop] || prop.charAt(0).toUpperCase() + prop.substr(1)
 
         if typeof value == 'object'
             dd(class=itemClass, itemprop=prop, itemtype=value['@type'], itemscope)
+                mixin itemValue(value, prop)
+
+        else if prop == 'image' || prop == 'birthDate'
+            dd(class=itemClass)
                 mixin itemValue(value, prop)
 
         else
@@ -84,35 +86,35 @@ block content
         h2 Contact
         dl
             each value, prop in meta.creator
-                mixin definition_meta(value, prop)
+                mixin itemDefinition(value, prop)
 
 
             dt Twitter
             dd
                 a(href="http://twitter.com/pampo")
-                    i.icon-twitter
+                    i.icon-large.icon-twitter
                     | @pampo
 
             dt Facebook
             dd
                 a(href="http://facebook.com/jamespamplin")
-                    i.icon-facebook
+                    i.icon-large.icon-facebook
                     | facebook
 
             dt Github
             dd
                 a(href="https://github.com/jamespamplin")
-                    i.icon-github
+                    i.icon-large.icon-github
                     | github
 
             dt Linkedin
             dd
                 a(href="http://www.linkedin.com/in/jamespamplin")
-                    i.icon-linkedin
+                    i.icon-large.icon-linkedin
                     | linkedin
 
             dt Google+
             dd
                 a(href="https://plus.google.com/101334522728234012326?rel=author")
-                    i.icon-google-plus
-                    | Google+
+                    i.icon-large.icon-google-plus
+                    | google+
