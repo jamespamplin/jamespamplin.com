@@ -1,64 +1,112 @@
 extend layout
 
+
+
 mixin item(key, className)
-	- var itemClass = className || key
-	- var value = meta.creator[key]
-	case key
-		when 'email'
-			a(itemprop=key, class=itemClass, href="mailto:"+value)= value
-		when 'photo'
-			img(itemprop=key, class=itemClass, src=value)
-		default
-			div(itemprop=key, class=itemClass)= value
+    - var itemClass = className || key
+    - var value = meta.creator[key]
+    case key
+        when 'email'
+            a(itemprop=key, class=itemClass, href="mailto:"+value)= value
+        when 'photo'
+            img(itemprop=key, class=itemClass, src=value)
+        default
+            div(itemprop=key, class=itemClass)= value
+
+mixin itemValue(value, prop)
+    case prop
+        when 'name'
+            span.given-name= meta.creator.givenName
+            | &nbsp;
+            span.family-name= meta.creator.familyName
+
+        when 'address'
+            if value.addressLocality
+                span.locality(itemprop="addressLocality")= value.addressLocality
+            if value.addressCountry
+                | ,&nbsp;
+                span.country-name(itemprop="addressCountry")= value.addressCountry
+
+        when 'url'
+            a(class=prop, href=value)= value
+
+        when 'email'
+            i.icon-envelope
+            a(class=prop, href="mailto:"+value)= value
+
+        when 'image'
+            img.photo(alt="Photo", src=value)
+
+        when 'birthDate'
+            time.bday(datetime=value) 14 August 1984
+
+        default
+            if typeof value == 'object'
+                if value.url
+                    a(href=value.url)= value.name || value.url
+
+                else if value.name
+                    span(itemprop="name")= value.name
+
+            else
+                | #{value}
+
+
+
+mixin definition_meta(value, prop)
+    propLabels = { '@type': false, 'birthDate': 'Birth date', 'allumniOf': 'Allumni of', 'image': 'Photo', 'givenName': false, 'url': 'Website', 'familyName': false, 'jobTitle': 'Job title', 'worksFor': 'Works for' }
+    classMap = { 'birthDate': false, 'address': 'adr', 'image': false, 'name': 'fn', 'jobTitle': 'role', 'worksFor': 'org' }
+
+    itemClass = classMap[prop] !== false && (classMap[prop] || prop) || ''
+
+    unless propLabels[prop] === false
+        dt= propLabels[prop] || prop.charAt(0).toUpperCase() + prop.substr(1)
+
+        if typeof value == 'object'
+            dd(class=itemClass, itemprop=prop, itemtype=value['@type'], itemscope)
+                mixin itemValue(value, prop)
+
+        else
+            dd(class=itemClass, itemprop=prop)
+                mixin itemValue(value, prop)
+
 
 block append head
-	link(rel="profile", href="http://microformats.org/profile/hcard")
+    link(rel="profile", href="http://microformats.org/profile/hcard")
 
 
 block content
 
-	section(itemprop="mainContentOfPage", itemtype="http://schema.org/WebPageElement", itemscope)
-		include ../content/about.md
+    section(itemprop="mainContentOfPage", itemtype="http://schema.org/WebPageElement", itemscope)
+        include ../content/about.md
 
-	aside.vcard(itemprop="creator", itemtype="http://schema.org/Person", itemscope)
-		h2 Contact
-		dl
-			dt Name:
-			dd.fn(itemprop="name")
-				span.given-name= meta.creator.givenName
-				| &nbsp;
-				span.family-name= meta.creator.familyName
-
-			dt Email
-			dd
-				mixin item('email')
-
-			dt Website
-			dd
-				a.url(itemprop="url", href="http://www.jamespamplin.com/") www.jamespamplin.com
+    aside.vcard(itemprop="creator", itemtype="http://schema.org/Person", itemscope)
+        h2 Contact
+        dl
+            each value, prop in meta.creator
+                mixin definition_meta(value, prop)
 
 
-			dt.hide Photo
-			dd
-				img.photo(itemprop="image", alt="Photo", src="http://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=320")
+            dt Twitter
+            dd
+                a(href="http://twitter.com/pampo")
+                    i.icon-twitter
+                    | @pampo
 
-			dt Gender
-			dd.gender(itemprop="gender") Male
+            dt Facebook
+            dd
+                a(href="http://facebook.com/jamespamplin")
+                    i.icon-facebook
+                    | facebook
 
-			dt Locality
-			dd.adr
-				span.locality London
-				| ,&nbsp;
-				span.country-name UK
+            dt Github
+            dd
+                a(href="https://github.com/jamespamplin")
+                    i.icon-github
+                    | github
 
-			dt Work
-			dd
-				span.role(itemprop="jobTitle") Senior Web Developer
-				| &nbsp;-&nbsp;
-				a.org(rel="affiliation", href="http://www.bbc.co.uk/") BBC
-
-
-			dt Birth date
-			dd
-				time.bday(itemprop="birthDate", datetime="1984-08-14") 14 August 1984
-
+            dt Linkedin
+            dd
+                a(href="http://www.linkedin.com/in/jamespamplin")
+                    i.icon-linkedin
+                    | linkedin

@@ -1,9 +1,18 @@
 {
     "@type": "http://schema.org/AboutPage",
     "name": "About me",
+    "description": "James Pamplin is a Web Developer based in London, UK.",
     "url": "http://www.jamespamplin.com/about",
     "creator": {
         "@type": "http://schema.org/Person",
+        "name": "James Pamplin",
+        "familyName": "Pamplin",
+        "givenName": "James",
+        "birthDate": "1984-08-14",
+        "email": "james@jamespamplin.com",
+        "gender": "Male",
+        "image": "http://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=320",
+        "url": "http://www.jamespamplin.com/",
         "address": {
             "@type": "http://schema.org/PostalAddress",
             "name": "Home",
@@ -15,16 +24,7 @@
             "name": "The University of Newcastle, Australia",
             "url": "http://www.newcastle.edu.au/"
         },
-        "birthDate": "1984-08-14",
-        "description": "James Pamplin is a Web Developer based in London, UK.",
-        "email": "james@jamespamplin.com",
-        "familyName": "Pamplin",
-        "gender": "Male",
-        "givenName": "James",
         "jobTitle": "Senior Web Developer",
-        "name": "James Pamplin",
-        "photo": "http://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=200",
-        "url": "http://www.jamespamplin.com/",
         "worksFor": {
             "@type": "http://schema.org/Corporation",
             "name": "BBC",
