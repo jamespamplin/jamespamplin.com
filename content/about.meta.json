@@ -24,11 +24,11 @@
             "name": "The University of Newcastle, Australia",
             "url": "http://www.newcastle.edu.au/"
         },
-        "jobTitle": "Senior Web Developer",
+        "jobTitle": "Senior Software Developer",
         "worksFor": {
             "@type": "http://schema.org/Corporation",
-            "name": "BBC",
-            "url": "http://www.bbc.co.uk/"
+            "name": "The Guardian",
+            "url": "http://theguardian.com/"
         }
     },
     "speciality": {
