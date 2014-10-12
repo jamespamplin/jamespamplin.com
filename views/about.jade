@@ -51,11 +51,11 @@ mixin itemValue(value, prop)
 
 
 mixin itemDefinition(value, prop)
-    propLabels = { '@type': false, 'birthDate': 'Birth date', 'address': 'Locality', 'allumniOf': 'Allumni of', 'image': 'Photo', 'givenName': false, 'url': 'Website', 'familyName': false, 'jobTitle': 'Job title', 'worksFor': 'Works for' }
-    classMap = { 'birthDate': false, 'address': 'adr', 'image': false, 'name': 'fn', 'jobTitle': 'role', 'worksFor': 'org' }
+    - var propLabels = { '@type': false, 'birthDate': 'Birth date', 'address': 'Locality', 'allumniOf': 'Allumni of', 'image': 'Photo', 'givenName': false, 'url': 'Website', 'familyName': false, 'jobTitle': 'Job title', 'worksFor': 'Works for' }
+    - var classMap = { 'birthDate': false, 'address': 'adr', 'image': false, 'name': 'fn', 'jobTitle': 'role', 'worksFor': 'org' }
 
-    itemTermClass = prop == 'image' && 'hide' || ''
-    itemClass = classMap[prop] !== false && (classMap[prop] || prop) || ''
+    - var itemTermClass = prop == 'image' && 'hide' || ''
+    - var itemClass = classMap[prop] !== false && (classMap[prop] || prop) || ''
 
     unless propLabels[prop] === false
         dt(class=itemTermClass)= propLabels[prop] || prop.charAt(0).toUpperCase() + prop.substr(1)
@@ -80,7 +80,7 @@ block append head
 block content
 
     section(itemprop="mainContentOfPage", itemtype="http://schema.org/WebPageElement", itemscope)
-        include ../content/about.md
+        include:markdown ../content/about.md
 
     aside.vcard(itemprop="creator", itemtype="http://schema.org/Person", itemscope)
         h2 Contact
