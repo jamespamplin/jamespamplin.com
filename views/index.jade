@@ -1,0 +1,9 @@
+extend layout
+
+block content
+  - var posts = getPosts(0,5)
+  - var page  = 1
+  ul
+    - each post in posts
+      li
+        include includes/_post-snippet

@@ -3,9 +3,22 @@ var express = require('express'),
     stylus = require('stylus'),
     nib = require('nib'),
 
-    app = express();
+    app = express(),
+
+    Poet = require('poet');
 
 app.use(morgan('combined'));
+
+var poet = Poet(app, {
+      posts: './posts/',
+      postsPerPage: 5,
+      metaFormat: 'json'
+    });
+
+poet.init().then(function () {
+  // ready to go!
+});
+
 
 function compile(str, path) {
     return stylus(str)
@@ -23,18 +36,21 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
-
 app.get('/', function (req, res) {
-    var metadata = require('./content/about.meta.json');
-    res.render(
-        'about',
-        {
-            title: metadata.name,
-            debug: false,
-            meta: metadata
-        }
-    );
+  res.render('index');
 });
+
+// app.get('/', function (req, res) {
+//     var metadata = require('./content/about.meta.json');
+//     res.render(
+//         'about',
+//         {
+//             title: metadata.name,
+//             debug: false,
+//             meta: metadata
+//         }
+//     );
+// });
 
 
 
