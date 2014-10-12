@@ -1,9 +1,11 @@
 var express = require('express'),
+    morgan = require('morgan'),
     stylus = require('stylus'),
     nib = require('nib'),
 
-    app = express(express.logger());
+    app = express();
 
+app.use(morgan('combined'));
 
 function compile(str, path) {
     return stylus(str)
@@ -13,7 +15,6 @@ function compile(str, path) {
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(express.logger('dev'));
 app.use(stylus.middleware(
     {
         src: __dirname + '/public',
