@@ -1,13 +1,23 @@
 {{{
-  "title": "Lorem ipsum",
+  "title": "Style guide",
   "tags": ["blog", "fun", "javascript"],
   "category": "javascript",
-  "date": "2014-10-11"
+  "date": "2014-10-11",
+  "draft": true
 }}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et arcu sollicitudin, venenatis ipsum interdum, commodo nulla. Morbi pulvinar faucibus metus, a iaculis sapien ultrices eu. Etiam ut diam maximus justo dignissim efficitur eget at ligula. Morbi viverra est vel quam congue, quis interdum enim venenatis. Vivamus ut eros est. Suspendisse pulvinar eleifend varius. In ac aliquet velit.
+Blog style guide.
 
-Aliquam a aliquet ipsum. Nam efficitur metus et laoreet efficitur. Nullam at venenatis diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lorem magna. Vivamus libero quam, venenatis eget dignissim vitae, rhoncus et felis. Donec bibendum convallis quam, eu porta orci. Proin lectus nisl, interdum a commodo et, sodales dictum orci. Proin ac rutrum dui. Duis interdum sed tortor non rutrum.
+Lorem ipsum dolor sit amet, **consectetur adipiscing elit**. _Mauris et arcu sollicitudin_, venenatis ipsum interdum, commodo nulla. `Morbi pulvinar faucibus metus`, a iaculis sapien ultrices eu. Etiam ut diam maximus justo dignissim efficitur eget at ligula. Morbi viverra est vel quam congue, quis interdum enim venenatis. Vivamus ut eros est. Suspendisse pulvinar eleifend varius. In ac aliquet velit.
+
+- Here's a bulleted list
+- Another bullet
+
+Aliquam a aliquet ipsum. Nam `efficitur` metus et laoreet efficitur. Nullam at venenatis diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lorem magna. Vivamus libero quam, venenatis eget dignissim vitae, rhoncus et felis. Donec bibendum convallis quam, eu porta orci. Proin lectus nisl, interdum a commodo et, sodales dictum orci. Proin ac rutrum dui. Duis interdum sed tortor non rutrum.
+
+```
+var jsThingy = [1, 2, 4].map((x) => x * x);
+```
 
 Donec nisi elit, blandit ac semper eu, tincidunt et turpis. Duis vitae dui id eros imperdiet convallis. Vivamus in sapien dictum, aliquam elit consectetur, venenatis sapien. Vestibulum ante tortor, lacinia vitae blandit eget, ultrices in augue. Vestibulum eget nulla nec justo pharetra aliquet lobortis eget odio. Vestibulum accumsan quis metus vel cursus. Pellentesque volutpat arcu a convallis sollicitudin. Mauris eu vulputate risus, eu dapibus lacus. Integer tincidunt eleifend ante vel faucibus. Duis eu convallis lacus. Etiam quam magna, auctor sed lacus ut, interdum lobortis turpis. Aliquam a nisl ante.
 

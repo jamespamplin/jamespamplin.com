@@ -5,7 +5,9 @@ var express = require('express'),
 
     app = express(),
 
-    Poet = require('poet');
+    Poet = require('poet'),
+
+    moment = require('moment');
 
 app.use(morgan('combined'));
 
@@ -15,8 +17,14 @@ var poet = Poet(app, {
       metaFormat: 'json'
     });
 
-poet.init().then(function () {
-  // ready to go!
+poet.watch().init().then(function () {
+
+  var post;
+  for (var postId in poet.posts) {
+    post = poet.posts[postId];
+    post.dateFormatted = moment(post.date).format('DD MMMM YYYY');
+  }
+
 });
 
 
