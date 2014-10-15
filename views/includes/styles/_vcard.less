@@ -1,0 +1,64 @@
+
+// About page
+.vcard {
+  dl {
+    font-size: 1.5em;
+  }
+
+  dt {
+    float: left;
+    font-weight: bold;
+    clear: left;
+    width: 8em;
+  }
+
+  dd {
+    float: left;
+  }
+
+  dt, dd {
+    line-height: 1.4em;
+    margin: 0 0 0.6em;
+  }
+
+  .photo {
+    position: absolute;
+    top: 1.6em;
+    right: 0;
+    width: 160px;
+  }
+
+  i { // icons
+    text-decoration: none;
+    color: #271C48;
+    margin-right: 0.3em;
+  }
+}
+
+.content {
+  p, ul {
+    font-size: 1.5em;
+    line-height: 1.667em;
+    margin: 0.25em 2em 1em 0;
+    padding: 0;
+  }
+
+  ul ul {
+    font-size: inherit;
+  }
+
+  li {
+    list-style-type: square;
+    margin: 0 0 0 2em;
+    padding: 0;
+  }
+
+  a {
+    color: #6e55a9;
+  }
+}
+@media (max-width: 480px) {
+  .vcard .photo {
+    width: 120px;
+  }
+}

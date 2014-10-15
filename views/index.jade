@@ -3,7 +3,7 @@ extend layout
 block content
   - var posts = getPosts(0,5)
   - var page  = 1
-  ul
+  ul.post-list
     - each post in posts
-      li
+      li.post-list__item
         include includes/_post-snippet

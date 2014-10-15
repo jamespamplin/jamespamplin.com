@@ -1,12 +1,11 @@
-h3
-  a(href=post.url)
+h2.post-snippet__title
+  a.post-snippet__title-link(href=post.url)
     = post.title
-  .date
+  .post-snippet__date
     = post.dateFormatted
-span.date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
-div.post.content
+p.post-snippet__content
   != post.preview
-div.tags
+.post-snippet__tag-list
   - each tag in post.tags
-    a(href=tagUrl(tag))
-      span.label.label-info #{tag}
+    a.post-snippet__tag(href=tagUrl(tag))
+      = tag
