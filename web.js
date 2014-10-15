@@ -1,7 +1,5 @@
 var express = require('express'),
     morgan = require('morgan'),
-    stylus = require('stylus'),
-    nib = require('nib'),
 
     app = express(),
 
@@ -28,20 +26,9 @@ poet.watch().init().then(function () {
 });
 
 
-function compile(str, path) {
-    return stylus(str)
-        .set('filename', path)
-        .use(nib());
-}
-
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(stylus.middleware(
-    {
-        src: __dirname + '/public',
-        compile: compile
-    }
-));
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
