@@ -1,10 +1,10 @@
-- var title = title || meta && meta.name
+- var pageTitle = title || meta && meta.name
 - var schema = meta && meta['@type'] || 'http://schema.org/WebPage'
 
 doctype html
 html
   head
-    title #{title} - JamesPamplin.com
+    title #{pageTitle} - JamesPamplin.com
     block head
       meta(charset="UTF-8")
       meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -16,12 +16,14 @@ html
   body(itemtype=schema, itemscope)
     .body
       header
-        h1(itemprop="name")
-          a.title(href="/", title="JamesPamplin.com")
+        a.title(href="/", title="JamesPamplin.com")
             span.first-name James
             span.last-name Pamplin
 
-      article.content
-        block content
+        h1(itemprop="name")
+          .page-title
+            = pageTitle
+
+      block content
 
     include ga.jade

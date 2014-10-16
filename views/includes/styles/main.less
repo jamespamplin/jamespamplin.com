@@ -20,11 +20,8 @@ body {
   position: relative;
 }
 
-header {
-  margin: 3em 0 4em;
-}
 
-header h1, h2, h3 {
+h2, h3 {
   &:extend(.font-title);
   line-height: 1em;
   margin: 0;
@@ -34,10 +31,6 @@ header h1, h2, h3 {
   overflow: hidden;
 }
 
-h1 {
-  font-size: 6.4em;
-  letter-spacing: -3px;
-}
 
 h2 {
   font-size: 3.6em;
@@ -51,33 +44,6 @@ h3 {
   margin: 1em 0 0;
 }
 
-a.title {
-  text-decoration: none;
-  display: block;
-  height: 1.6em;
-
-  .first-name {
-    display: block;
-    color: #927fbf;
-    text-shadow: 0.025em 0.025em 0.025em #6e55a9;
-    position: relative;
-    top: -0.3em;
-  }
-
-  .last-name {
-    display: block;
-    color: #271C48;
-    text-shadow: 0.025em 0.025em 0.025em #6448b8;
-    position: relative;
-    top: -0.5em;
-    left: 0.2em;
-  }
-}
-
-a.subtitle {
-  text-decoration: none;
-  font-size: 0.5em;
-}
 
 .hide {
   position: absolute;
@@ -86,5 +52,6 @@ a.subtitle {
   overflow: hidden;
 }
 
-@import "_blog.less";
-@import "_vcard.less";
+@import "_header";
+@import "_blog";
+@import "_vcard";

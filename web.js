@@ -32,20 +32,22 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', {
+    title: 'Blog'
+  });
 });
 
-// app.get('/', function (req, res) {
-//     var metadata = require('./content/about.meta.json');
-//     res.render(
-//         'about',
-//         {
-//             title: metadata.name,
-//             debug: false,
-//             meta: metadata
-//         }
-//     );
-// });
+app.get('/about', function (req, res) {
+    var metadata = require('./content/about.meta.json');
+    res.render(
+        'about',
+        {
+            title: metadata.name,
+            debug: false,
+            meta: metadata
+        }
+    );
+});
 
 
 
