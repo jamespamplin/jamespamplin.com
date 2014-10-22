@@ -1,4 +1,66 @@
 
 .footer {
   background-color: #1D365D;
+  margin-top: 20px;
+
+  &__body {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  &__title {
+    text-decoration: none;
+    color: #ecefe2;
+    .font-size(40);
+
+    &--first-name {
+
+    }
+
+    &--last-name {
+
+    }
+  }
+
+
+  &__link {
+    &-list {
+      margin: 0;
+      padding: 0 100px 0 0;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    &-item {
+      display: inline;
+    }
+
+    &--author {
+      display: block;
+      color: #ecefe2;
+      text-align: right;
+      .font-size(16);
+      line-height: 24px;
+    }
+
+    &-image--author {
+      border-radius: 50%;
+      width: 80px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &--twitter,
+    &--github,
+    &--linkedin {
+      margin-left: 1em;
+      color: #ecefe2;
+      .font-size(16);
+      line-height: 24px;
+    }
+  }
 }
