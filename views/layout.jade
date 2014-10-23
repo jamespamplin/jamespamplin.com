@@ -1,4 +1,4 @@
-- var pageTitle = title || meta && meta.name
+- var pageTitle = title || post && post.title || meta && meta.name
 - var schema = meta && meta['@type'] || 'http://schema.org/WebPage'
 
 doctype html
@@ -20,9 +20,8 @@ html
             span.main-title__text--first-name James
             span.main-title__text--last-name Pamplin
 
-        h1(itemprop="name")
-          .page-title
-            = pageTitle
+        h1.title(itemprop="name")
+          = pageTitle
 
       block content
 
