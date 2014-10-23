@@ -13,7 +13,7 @@
   &__title {
     text-decoration: none;
     color: #ecefe2;
-    .font-size(40);
+    @include font-size(40);
 
     &--first-name {
 
@@ -42,7 +42,7 @@
       display: block;
       color: #ecefe2;
       text-align: right;
-      .font-size(16);
+      @include font-size(16);
       line-height: 24px;
     }
 
@@ -59,7 +59,7 @@
     &--linkedin {
       margin-left: 1em;
       color: #ecefe2;
-      .font-size(16);
+      @include font-size(16);
       line-height: 24px;
     }
   }

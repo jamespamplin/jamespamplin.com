@@ -5,7 +5,7 @@ header {
 }
 
 header h1 {
-  &:extend(.font-title);
+  @extend %font-title;
 
   margin: 0;
   padding: 0;
@@ -15,8 +15,8 @@ header h1 {
 a.title {
   display: block;
 
-  &:extend(.font-title);
-  .font-size(64);
+  @extend %font-title;
+  @include font-size(64);
   line-height: 1em;
   letter-spacing: -3px;
   text-decoration: none;
@@ -48,8 +48,8 @@ a.title {
 }
 
 .page-title {
-  &:extend(.font-title);
-  .font-size(40);
+  @extend %font-title;
+  @include font-size(40);
   letter-spacing: -2px;
   text-transform: lowercase;
   margin-top: 20px;

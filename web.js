@@ -2,6 +2,8 @@ var express = require('express'),
     morgan = require('morgan'),
 
     app = express(),
+    jade = require('jade'),
+    sass = require('node-sass'),
 
     Poet = require('poet'),
 
@@ -25,6 +27,23 @@ poet.watch().init().then(function () {
 
 });
 
+// node-sass filter hacked into Jade
+// TODO: PR ForbesLindesay/transformers
+jade.filters['node-sass'] = function(str, options) {
+  var sassOptions = {
+    sourceComments: 'map',
+    outputStyle: 'compressed',
+    outFile: options.outFile
+  };
+
+  if (options.filename) {
+    sassOptions.file = options.filename;
+  } else {
+    sassOptions.data = str;
+  }
+
+  return sass.renderSync(sassOptions);
+};
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');

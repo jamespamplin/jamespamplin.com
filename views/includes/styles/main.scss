@@ -1,9 +1,9 @@
-@import "_typography.less";
+@import "typography";
 
 // --------- Main layout ---------
 html {
+  @extend %font-body;
   font-size: 62.5%;
-  &:extend(.font-body);
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 
 
 h2, h3 {
-  &:extend(.font-title);
+  @extend %font-title;
   line-height: 1em;
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ h3 {
   overflow: hidden;
 }
 
-@import "_header";
-@import "_blog";
-@import "_vcard";
-@import "_footer";
+@import "header";
+@import "blog";
+@import "vcard";
+@import "footer";

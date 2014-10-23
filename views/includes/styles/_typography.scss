@@ -1,15 +1,15 @@
 @import url('http://fonts.googleapis.com/css?family=Raleway:600');
 
-.font-title {
+%font-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 
-.font-body {
+%font-body {
   font-family: Georgia, serif;
 }
 
-.font-size(@size) {
-  font-size: 0px + @size;
-  font-size: 0rem + @size / 10;
+@mixin font-size($size) {
+  font-size: 0px + $size;
+  font-size: 0rem + $size / 10;
 }
