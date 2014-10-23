@@ -1,4 +1,6 @@
 
+@import "colours";
+@import "title";
 
 header {
   margin: 3em 0 4em;
@@ -12,39 +14,15 @@ header h1 {
 }
 
 
-a.title {
+.main-title {
   display: block;
-
-  @extend %font-title;
-  @include font-size(64);
-  line-height: 1em;
-  letter-spacing: -3px;
   text-decoration: none;
-  text-transform: lowercase;
+
+  @include main-title(64, $c-name-first, $c-name-last);
 
   margin: 0;
   padding: 0;
-  height: 1.6em;
-  overflow: hidden;
 
-  .first-name,
-  .last-name {
-    display: block;
-    position: relative;
-  }
-
-  .first-name {
-    color: #927fbf;
-    text-shadow: 0.025em 0.025em 0.025em #6e55a9;
-    top: -0.3em;
-  }
-
-  .last-name {
-    color: #271C48;
-    text-shadow: 0.025em 0.025em 0.025em #6448b8;
-    top: -0.5em;
-    left: 0.2em;
-  }
 }
 
 .page-title {

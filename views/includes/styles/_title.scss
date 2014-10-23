@@ -1,0 +1,32 @@
+
+%main-title__text {
+  display: block;
+  position: relative;
+}
+
+@mixin main-title($font-size, $c-first, $c-last) {
+
+  @include font-size($font-size);
+
+  @extend %font-title;
+  line-height: 1em;
+  letter-spacing: -3px;
+  text-transform: lowercase;
+  height: 1.6em;
+  overflow: hidden;
+
+  &__text--first-name {
+    @extend %main-title__text;
+    color: $c-first;
+    text-shadow: 0.025em 0.025em 0.025em ($c-first - #242A16);
+    top: -0.3em;
+  }
+
+  &__text--last-name {
+    @extend %main-title__text;
+    color: $c-last;
+    text-shadow: 0.025em 0.025em 0.025em ($c-last + #3D2C70);
+    top: -0.5em;
+    left: 0.2em;
+  }
+}
