@@ -1,6 +1,7 @@
 @import "colours";
 @import "typography";
 @import "title";
+@import "layout";
 
 // --------- Main layout ---------
 html {
@@ -16,10 +17,7 @@ body {
 }
 
 .body {
-  max-width: 80em;
-  margin: 0 auto;
-  padding: 1em 20px;
-  position: relative;
+  @extend %col-center;
 }
 
 
