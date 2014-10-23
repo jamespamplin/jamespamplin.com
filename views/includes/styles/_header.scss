@@ -1,7 +1,4 @@
 
-@import "colours";
-@import "title";
-
 header {
   margin: 3em 0 4em;
 }
@@ -15,14 +12,8 @@ header h1 {
 
 
 .main-title {
-  display: block;
+  @include main-title--shadows(64, $c-name-first, $c-name-last);
   text-decoration: none;
-
-  @include main-title(64, $c-name-first, $c-name-last);
-
-  margin: 0;
-  padding: 0;
-
 }
 
 .page-title {
@@ -32,4 +23,3 @@ header h1 {
   text-transform: lowercase;
   margin-top: 20px;
 }
-

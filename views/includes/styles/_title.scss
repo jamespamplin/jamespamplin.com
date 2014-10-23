@@ -1,32 +1,55 @@
 
+%main-title {
+  @extend %font-title;
+  display: block;
+  line-height: 1em;
+  height: 1.6em;
+  overflow: hidden;
+}
+
 %main-title__text {
   display: block;
   position: relative;
+  text-transform: lowercase;
+}
+
+%main-title__text--first-name {
+  @extend %main-title__text;
+  top: -0.3em;
+}
+
+%main-title__text--last-name {
+  @extend %main-title__text;
+  top: -0.5em;
+  left: 0.2em;
 }
 
 @mixin main-title($font-size, $c-first, $c-last) {
 
   @include font-size($font-size);
+  @extend %main-title;
 
-  @extend %font-title;
-  line-height: 1em;
-  letter-spacing: -3px;
-  text-transform: lowercase;
-  height: 1.6em;
-  overflow: hidden;
+  letter-spacing: 0px - $font-size / 22;
 
   &__text--first-name {
-    @extend %main-title__text;
+    @extend %main-title__text--first-name;
     color: $c-first;
-    text-shadow: 0.025em 0.025em 0.025em ($c-first - #242A16);
-    top: -0.3em;
   }
 
   &__text--last-name {
-    @extend %main-title__text;
+    @extend %main-title__text--last-name;
     color: $c-last;
+  }
+}
+
+@mixin main-title--shadows($font-size, $c-first, $c-last) {
+  @include main-title($font-size, $c-first, $c-last);
+
+  &__text--first-name {
+    text-shadow: 0.025em 0.025em 0.025em ($c-first - #242A16);
+  }
+
+  &__text--last-name {
     text-shadow: 0.025em 0.025em 0.025em ($c-last + #3D2C70);
-    top: -0.5em;
-    left: 0.2em;
   }
 }

@@ -10,18 +10,9 @@
     position: relative;
   }
 
-  &__title {
+  &-title {
+    @include main-title(48, #ecefe2, #ecefe2);
     text-decoration: none;
-    color: #ecefe2;
-    @include font-size(40);
-
-    &--first-name {
-
-    }
-
-    &--last-name {
-
-    }
   }
 
 
