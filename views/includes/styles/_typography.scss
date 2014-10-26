@@ -5,8 +5,19 @@
   font-weight: 600;
 }
 
-%font-body {
+%font-style-body {
+  color: #333;
   font-family: Georgia, serif;
+  font-size: 1.6em; // 16px
+  line-height: 1.5em; // 24px
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+%font-style-fixed {
+  font-size: font-size(12);
+  font-family: Consolas,"Liberation Mono",monospace;
 }
 
 @mixin font-size($size) {
@@ -16,4 +27,33 @@
 
 %font-size-body {
   @include font-size(16);
+}
+
+p {
+  margin-right: 20px;
+}
+
+p, pre {
+  margin-bottom: 1.5em;
+}
+
+code {
+  @extend %font-style-fixed;
+  @include font-size(14);
+
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding: 0.3em;
+}
+
+pre {
+  @include font-size(16);
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  overflow: auto;
+  padding: 1em;
+}
+
+a {
+  color: $c-link;
 }

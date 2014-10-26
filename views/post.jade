@@ -1,11 +1,16 @@
 extends layout
 
-block content
-  aside.post-date
+mixin post__tags
+  aside.post__tags
+    - each tag in post.tags
+      a.post__tag(href=tagUrl(tag))
+        = tag
+
+block pre-content
+  aside.post__date
     = post.dateFormatted
-  article.post
-    != post.content
-    div.tags
-      - each tag in post.tags
-        a(href=tagUrl(tag))
-          span.label.label-info #{tag}
+
+block content
+  != post.content
+
+  +post__tags

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  color: #333;
+  @extend %font-style-body;
   background-color: #fff;
   margin: 0;
   padding: 0;
@@ -54,6 +54,5 @@ h3 {
 
 @import "header";
 @import "blog";
-@import "post";
 @import "vcard";
 @import "footer";

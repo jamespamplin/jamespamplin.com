@@ -1,4 +1,33 @@
 
+
+%blog-tag {
+  margin-right: 5px;
+
+  &::before {
+    content: '#';
+  }
+}
+
+.post {
+
+  &__date {
+    color: #777;
+    letter-spacing: 0.5px;
+  }
+
+  &__tags {
+
+  }
+
+  &__tag {
+    @extend %blog-tag;
+  }
+
+}
+
+
+
+
 .post-list {
   margin: 0;
   padding: 0;
