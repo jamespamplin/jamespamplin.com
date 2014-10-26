@@ -1,11 +1,8 @@
+.post-snippet__date
+    = post.dateFormatted
+
 h2.post-snippet__title
   a.post-snippet__title-link(href=post.url)
     = post.title
-  .post-snippet__date
-    = post.dateFormatted
-p.post-snippet__content
-  != post.preview
-.post-snippet__tag-list
-  - each tag in post.tags
-    a.post-snippet__tag(href=tagUrl(tag))
-      = tag
+
+!= post.preview

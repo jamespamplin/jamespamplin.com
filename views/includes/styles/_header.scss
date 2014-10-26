@@ -1,13 +1,13 @@
 
 .main-title {
   @include main-title--shadows(64, $c-name-first, $c-name-last);
-  text-decoration: none;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+  padding: 0;
 }
 
 .title {
   @extend %font-title;
   @include font-size(40);
   letter-spacing: -1px;
-  margin: 15px 0 40px;
+  margin: 15px 0 30px;
 }

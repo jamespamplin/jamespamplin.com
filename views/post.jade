@@ -1,4 +1,4 @@
-extends layout
+extends page-layout
 
 mixin post__tags
   aside.post__tags
@@ -6,9 +6,14 @@ mixin post__tags
       a.post__tag(href=tagUrl(tag))
         = tag
 
+
 block pre-content
   aside.post__date
     = post.dateFormatted
+
+  h1.title(itemprop="name")
+    = pageTitle
+
 
 block content
   != post.content

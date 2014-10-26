@@ -8,11 +8,15 @@
   }
 }
 
+%blog-date {
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
 .post {
 
   &__date {
-    color: #777;
-    letter-spacing: 0.5px;
+    @extend %blog-date;
   }
 
   &__tags {
@@ -26,16 +30,23 @@
 }
 
 
-
-
 .post-list {
   margin: 0;
   padding: 0;
 
   &__item {
     list-style: none;
-    margin: 0;
+    margin: 0 0 60px;
     padding: 0;
+
+    // Override: hide the "read more" link
+    & p:last-child {
+      display: none;
+    }
+  }
+
+  &__item:last-child {
+    margin: 0;
   }
 }
 
@@ -43,25 +54,24 @@
 .post-snippet {
 
   &__title {
+    @extend %font-title;
+    @include font-size(36);
+    margin: 10px 0;
+    letter-spacing: -1px;
+    line-height: 1em;
 
     &-link {
-      font-size: 24px;
+
     }
   }
 
   &__date {
-    font-size: 24px;
+    @extend %blog-date;
   }
 
-  &__content {
-    font-size: 16px;
-  }
 
   &__tag {
-    margin-right: 5px;
-
-    &::before {
-      content: '#';
-    }
+    @extend %blog-tag;
   }
+
 }

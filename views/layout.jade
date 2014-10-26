@@ -1,6 +1,13 @@
 - var pageTitle = title || post && post.title || meta && meta.name
 - var schema = meta && meta['@type'] || 'http://schema.org/WebPage'
 
+
+mixin main-title
+  a.main-title__link(href="/", title="JamesPamplin.com")
+    span.main-title__text--first-name James
+    span.main-title__text--last-name Pamplin
+
+
 doctype html
 html
   head
@@ -16,16 +23,12 @@ html
   body(itemtype=schema, itemscope)
     .body
       header
-        a.main-title(href="/", title="JamesPamplin.com")
-            span.main-title__text--first-name James
-            span.main-title__text--last-name Pamplin
+        block title
+          h1.main-title(itemprop="name")
+            +main-title
 
       article
         block pre-content
-
-        h1.title(itemprop="name")
-          = pageTitle
-
         block content
 
     include includes/_footer

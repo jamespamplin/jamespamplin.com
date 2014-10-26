@@ -31,6 +31,10 @@
 
   letter-spacing: 0px - $font-size / 22;
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__text--first-name {
     @extend %main-title__text--first-name;
     color: $c-first;
