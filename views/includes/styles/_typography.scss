@@ -57,3 +57,18 @@ pre {
 a {
   color: $c-link;
 }
+
+h2, h3 {
+  @extend %font-title;
+  margin: 10px 0;
+  letter-spacing: -1px;
+  line-height: 1em;
+}
+
+h2 {
+  @include font-size(40);
+}
+
+h3 {
+  @include font-size(32);
+}

@@ -1,23 +1,10 @@
-About me
---------
 Born in the small town of Forster, NSW Australia and now living in London, UK. Keen interests in Web Development, Culture and Travel.
 
-Development
------------
+## Development
 James has worked in Web Development professionally since 2006, starting at [the University of Newcastle Australia](http://www.newcastle.edu.au/) working on the corporate Website in client side development, then moving to server-side Java EE development.
 
 In 2010, James moved to London and worked at the [BBC](http://bbc.co.uk/) for 4 years, working on Personalisation and Social shared front-end components and services across BBC online using PHP Zend and JavaScript, and also working on solutions design and architecture for Personalisation systems.
 
-James is currently working at [the Guardian](http://theguardian.com) as a Senior Software Developer on internal editorial tools.
+James is currently working at [The Guardian](http://theguardian.com) as a Senior Software Developer on internal editorial tools.
 
 James has a strong focus on Semantic markup and clean, testable, yet efficient code.
-
-
-### Skills
- - Advanced JavaScript development client and server side.
-   - Asynchronous Modular design with RequireJS, Object Oriented and Functional design, Closures.
-   - jQuery, Backbone, Angular.
-   - Test-Driven Development and Behaviour Driven Development with Cucumber, Jasmine, and QUnit.
-   - Node.js with Express, Jade, and Grunt.
- - Semantic HTML5 and CSS3. Responsive Design with Progressive Enhancement.
- - Object Oriented PHP and Test-Driven development using PHPUnit.

@@ -54,11 +54,6 @@
 .post-snippet {
 
   &__title {
-    @extend %font-title;
-    @include font-size(36);
-    margin: 10px 0;
-    letter-spacing: -1px;
-    line-height: 1em;
 
     &-link {
 

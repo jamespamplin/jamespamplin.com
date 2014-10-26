@@ -1,4 +1,4 @@
-extend layout
+extend page-layout
 
 
 
@@ -80,10 +80,9 @@ block append head
 block content
 
   article.content
+    include:markdown ../content/about.md
 
-    section(itemprop="mainContentOfPage", itemtype="http://schema.org/WebPageElement", itemscope)
-        include:markdown ../content/about.md
-
+mixin vcard
     aside.vcard(itemprop="creator", itemtype="http://schema.org/Person", itemscope)
         h2 Contact
         dl
