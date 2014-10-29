@@ -17,7 +17,11 @@ var poet = Poet(app, {
       metaFormat: 'json'
     });
 
-poet.watch().init().then(function () {
+if (process.env.NODE_ENV !== 'production') {
+  poet = poet.watch();
+}
+
+poet.init().then(function () {
 
   var post;
   for (var postId in poet.posts) {
