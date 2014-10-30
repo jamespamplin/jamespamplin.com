@@ -10,16 +10,21 @@
   &-title {
     @include main-title(48, $c-footer-text, $c-footer-text);
     text-decoration: none;
+    float: left;
+    width: 180px;
   }
 
 
   &__link {
     &-list {
       margin: 0;
-      padding: 0 100px 0 0;
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
+      padding: 80px 0 0;
+      text-align: right;
+
+      @media screen and (min-width: 550px) {
+        padding-top: 20px;
+        padding-right: 100px;
+      }
     }
 
     &-item {
@@ -30,7 +35,6 @@
       @extend %font-size-body;
       display: block;
       color: $c-footer-text;
-      text-align: right;
       line-height: 24px;
     }
 
@@ -38,8 +42,8 @@
       border-radius: 50%;
       width: 80px;
       position: absolute;
-      bottom: 0;
-      right: 0;
+      top: 15px;
+      right: 20px;
     }
 
     &--twitter,
