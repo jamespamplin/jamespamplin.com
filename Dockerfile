@@ -9,8 +9,10 @@ COPY . /home/jamespamplin.com
 
 WORKDIR /home/jamespamplin.com
 
+ENV NODE_ENV production
+
 RUN /usr/bin/npm install
 
-CMD /usr/bin/npm start
+CMD ["npm", "start"]
 
 EXPOSE 5000
