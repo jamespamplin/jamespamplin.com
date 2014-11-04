@@ -30,7 +30,11 @@
 }
 
 p {
-  margin-right: 20px;
+  margin-right: 80px;
+
+  @media screen and (max-width: 550px) {
+    margin-right: 10px;
+  }
 }
 
 p, pre {
@@ -59,10 +63,10 @@ a {
 }
 
 h2, h3 {
-  @extend %font-title;
-  margin: 10px 0;
+  margin: 15px 0;
   letter-spacing: -1px;
   line-height: 1em;
+  font-weight: normal;
 }
 
 h2 {

@@ -6,8 +6,8 @@
 }
 
 .title {
-  @extend %font-title;
   @include font-size(40);
   letter-spacing: -1px;
   margin: 15px 0 30px;
+  font-weight: normal;
 }
