@@ -1,0 +1,13 @@
+[Unit]
+Description=jamespamplin-www docker container
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill jp-www
+ExecStartPre=-/usr/bin/docker rm jp-www
+ExecStart=/usr/bin/docker run --name jp-www jp-www
+
+[Install]
+WantedBy=multi-user.target

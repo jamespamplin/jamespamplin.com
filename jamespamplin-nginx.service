@@ -1,0 +1,15 @@
+[Unit]
+Description=jamespamplin-nginx docker container
+After=docker.service
+Requires=docker.service
+After=jamespamplin-www.service
+Requires=jamespamplin-www.service
+
+[Service]
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill jp-nginx
+ExecStartPre=-/usr/bin/docker rm jp-nginx
+ExecStart=/usr/bin/docker run --name jp-nginx --link jp-www:www jp-nginx
+
+[Install]
+WantedBy=multi-user.target
