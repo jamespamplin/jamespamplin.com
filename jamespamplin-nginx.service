@@ -9,7 +9,7 @@ Requires=jamespamplin-www.service
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill jp-nginx
 ExecStartPre=-/usr/bin/docker rm jp-nginx
-ExecStart=/usr/bin/docker run --name jp-nginx --link jp-www:www jp-nginx
+ExecStart=/usr/bin/docker run --name jp-nginx --link jp-www:www -p 80:80 jp-nginx
 
 [Install]
 WantedBy=multi-user.target
