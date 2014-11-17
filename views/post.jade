@@ -3,19 +3,20 @@ extends page-layout
 mixin post__tags
   aside.post__tags
     - each tag in post.tags
-      a.post__tag(href=tagUrl(tag))
+      a.post__tag(href=tagUrl(tag), itemprop="articleSection")
         = tag
 
 
 block pre-content
-  aside.post__date
+  time.post__date(itemprop="datePublished", datetime=post.isoDate)
     = post.dateFormatted
 
-  h1.title(itemprop="name")
+  h1.title(itemprop="headline")
     = pageTitle
 
 
 block content
-  != post.content
+  div(itemprop="articleBody")
+    != post.content
 
   +post__tags

@@ -26,6 +26,7 @@ poet.init().then(function () {
   var post;
   for (var postId in poet.posts) {
     post = poet.posts[postId];
+    post.isoDate = moment(post.date).format('YYYY-MM-DD');
     post.dateFormatted = moment(post.date).format('DD MMMM YYYY');
   }
 
@@ -56,7 +57,8 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
   res.render('index', {
-    title: 'Blog'
+    title: 'Blog',
+    contentSchema: 'http://schema.org/Blog'
   });
 });
 

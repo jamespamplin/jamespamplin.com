@@ -1,10 +1,12 @@
 - var pageTitle = title || post && post.title || meta && meta.name
 - var schema = meta && meta['@type'] || 'http://schema.org/WebPage'
+- var articleSchema = contentSchema || post && 'http://schema.org/BlogPosting' || 'http://schema.org/Article'
 
 
 mixin main-title
   a.main-title__link(href="/", title="JamesPamplin.com")
     span.main-title__text--first-name James
+    | #{' '}
     span.main-title__text--last-name Pamplin
 
 
@@ -27,7 +29,7 @@ html
           h1.main-title(itemprop="name")
             +main-title
 
-      article
+      article(itemprop="mainContentOfPage", itemscope, itemtype=articleSchema, itemref="author")
         block pre-content
         block content
 

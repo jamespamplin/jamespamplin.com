@@ -1,8 +1,10 @@
-.post-snippet__date
+time.post-snippet__date(itemprop="datePublished", datetime=post.isoDate)
     = post.dateFormatted
 
-h2.post-snippet__title
-  a.post-snippet__title-link(href=post.url)
+h2.post-snippet__title(itemprop="headline")
+  a.post-snippet__title-link(href=post.url, itemprop="url")
     = post.title
+
+//- TODO: microdata description for post
 
 != post.preview
