@@ -1,0 +1,13 @@
+nginx:
+  build: ./nginx
+  ports:
+  - "8888:80"
+  links:
+  - www
+
+www:
+  build: .
+  environment:
+    NODE_ENV: development
+  volumes:
+  - .:/home/jamespamplin.com

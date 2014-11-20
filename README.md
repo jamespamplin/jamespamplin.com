@@ -3,7 +3,13 @@ My personal website with stuff about me.
 
 For more info see: http://www.jamespamplin.com/post/my-own-blog-finally
 
-## Setup
+## Local environment
+Spin up local environment with [Fig](http://www.fig.sh/). Builds containers
+and runs with necessary links and environment for local development mode.
+
+    fig up
+
+## Manual Setup
 
 Local setup:
 
