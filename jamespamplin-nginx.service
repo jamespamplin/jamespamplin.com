@@ -7,6 +7,7 @@ Requires=jamespamplin-www.service
 
 [Service]
 TimeoutStartSec=0
+Restart=on-failure
 ExecStartPre=-/usr/bin/docker kill jp-nginx
 ExecStartPre=-/usr/bin/docker rm jp-nginx
 ExecStart=/usr/bin/docker run --name jp-nginx --link jp-www:www -p 80:80 jp-nginx

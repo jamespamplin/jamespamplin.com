@@ -5,6 +5,7 @@ Requires=docker.service
 
 [Service]
 TimeoutStartSec=0
+Restart=on-failure
 ExecStartPre=-/usr/bin/docker kill jp-www
 ExecStartPre=-/usr/bin/docker rm jp-www
 ExecStart=/usr/bin/docker run --name jp-www jp-www
