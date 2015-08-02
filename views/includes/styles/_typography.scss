@@ -29,7 +29,7 @@
   @include font-size(16);
 }
 
-p {
+p, li {
   margin-right: 80px;
 
   @media screen and (max-width: 550px) {
