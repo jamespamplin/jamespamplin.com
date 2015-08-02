@@ -2,7 +2,7 @@
   "title": "My own blog, finally",
   "tags": ["projects", "javascript", "docker"],
   "category": "projects",
-  "date": "2014-10-14"
+  "date": "2015-8-2"
 }}}
 
 I've finally made the time to setup my own personal blog. Like many other web developers, I've had my own site for quite sometime. Until now, I've had nothing more than a simple page. But now I am inspired to start writing, thus I've created a blog. Here's how and why.
