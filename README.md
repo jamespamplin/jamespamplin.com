@@ -4,10 +4,10 @@ My personal website with stuff about me.
 For more info see: http://www.jamespamplin.com/post/my-own-blog-finally
 
 ## Local environment
-Spin up local environment with [Fig](http://www.fig.sh/). Builds containers
-and runs with necessary links and environment for local development mode.
+Spin up local environment with [Docker-Compose](https://docs.docker.com/compose/).
+Builds containers and runs with necessary links and environment for local development mode.
 
-    fig up
+    docker-compose up
 
 ## Manual Setup
 
