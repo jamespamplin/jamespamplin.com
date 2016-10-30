@@ -47,7 +47,8 @@ jade.filters['node-sass'] = function(str, options) {
     sassOptions.data = str;
   }
 
-  return sass.renderSync(sassOptions);
+  var result = sass.renderSync(sassOptions);
+  return result.css.toString();
 };
 
 app.set('views', __dirname + '/views');
