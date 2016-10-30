@@ -1,18 +1,15 @@
-
-FROM centos:centos7
-
-RUN yum install -y epel-release
-RUN yum update -y
-RUN yum install -y nodejs npm
-
-COPY . /home/jamespamplin.com
-
-WORKDIR /home/jamespamplin.com
+FROM node:4.6.1
 
 ENV NODE_ENV production
-
-RUN /usr/bin/npm install
 
 CMD ["npm", "start"]
 
 EXPOSE 5000
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install --production
+
+COPY . /app
