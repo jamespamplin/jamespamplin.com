@@ -3,6 +3,18 @@ My personal website with stuff about me.
 
 For more info see: http://www.jamespamplin.com/post/my-own-blog-finally
 
+## Deployment
+Use `cloud-config.yml` for startup User Data in a CoreOS node.
+
+## Builds
+TODO: CI
+
+    docker build -t jamespamplin/jamespamplin.com .
+    docker push jamespamplin/jamespamplin.com
+
+    docker build -t jamespamplin/jamespamplin.com-nginx ./nginx/
+    docker push jamespamplin/jamespamplin.com-nginx
+
 ## Local environment
 Spin up local environment with [Docker-Compose](https://docs.docker.com/compose/).
 Builds containers and runs with necessary links and environment for local development mode.

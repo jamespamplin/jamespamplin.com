@@ -8,7 +8,5 @@ TimeoutStartSec=0
 Restart=on-failure
 ExecStartPre=-/usr/bin/docker kill jp-www
 ExecStartPre=-/usr/bin/docker rm jp-www
-ExecStart=/usr/bin/docker run --name jp-www jp-www
-
-[Install]
-WantedBy=multi-user.target
+ExecStartPre=-/usr/bin/docker pull jamespamplin/jamespamplin.com
+ExecStart=/usr/bin/docker run --name jp-www jamespamplin/jamespamplin.com
