@@ -1,4 +1,11 @@
-@import url('http://fonts.googleapis.com/css?family=Raleway:600');
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'),
+    local('Raleway-SemiBold'),
+    url('/fonts/Raleway-SemiBold.woff2') format('woff2');
+}
 
 %font-title {
   font-family: 'Raleway', sans-serif;
