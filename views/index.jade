@@ -1,9 +1,0 @@
-extend layout
-
-block content
-  - var posts = getPosts(0,5)
-  - var page  = 1
-  ul.post-list
-    - each post in posts
-      li.post-list__item(itemprop="blogPost", itemscope, itemtype="http://schema.org/BlogPosting")
-        include includes/_post-snippet
