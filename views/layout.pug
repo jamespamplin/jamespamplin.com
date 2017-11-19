@@ -19,7 +19,7 @@ html
       meta(name="viewport", content="width=device-width, initial-scale=1")
       link(rel="icon", href="data:;base64,iVBORw0KGgo=")
       style
-        include:node-sass includes/styles/main.scss
+        include:scss(outputStyle='compressed') includes/styles/main.scss
 
 
   body(itemtype=schema, itemscope)
@@ -35,4 +35,4 @@ html
 
     include includes/_footer
 
-    include ga.jade
+    include ga.pug

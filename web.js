@@ -2,34 +2,15 @@ var express = require('express'),
     morgan = require('morgan'),
 
     app = express(),
-    jade = require('jade'),
+    pug = require('pug'),
     sass = require('node-sass'),
 
     moment = require('moment');
 
 app.use(morgan('combined'));
 
-// node-sass filter hacked into Jade
-// TODO: PR ForbesLindesay/transformers
-jade.filters['node-sass'] = function(str, options) {
-  var sassOptions = {
-    sourceComments: 'map',
-    outputStyle: 'compressed',
-    outFile: options.outFile
-  };
-
-  if (options.filename) {
-    sassOptions.file = options.filename;
-  } else {
-    sassOptions.data = str;
-  }
-
-  var result = sass.renderSync(sassOptions);
-  return result.css.toString();
-};
-
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
 

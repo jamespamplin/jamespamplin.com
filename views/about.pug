@@ -62,15 +62,15 @@ mixin itemDefinition(value, prop)
 
         if typeof value == 'object'
             dd(class=itemClass, itemprop=prop, itemtype=value['@type'], itemscope)
-                mixin itemValue(value, prop)
+                +itemValue(value, prop)
 
         else if prop == 'image' || prop == 'birthDate'
             dd(class=itemClass)
-                mixin itemValue(value, prop)
+                +itemValue(value, prop)
 
         else
             dd(class=itemClass, itemprop=prop)
-                mixin itemValue(value, prop)
+                +itemValue(value, prop)
 
 
 block append head
@@ -80,14 +80,14 @@ block append head
 block content
 
   article.content
-    include:markdown ../content/about.md
+    include:markdown-it ../content/about.md
 
 mixin vcard
     aside.vcard(itemprop="creator", itemtype="http://schema.org/Person", itemscope)
         h2 Contact
         dl
             each value, prop in meta.creator
-                mixin itemDefinition(value, prop)
+                +itemDefinition(value, prop)
 
 
             dt Twitter
