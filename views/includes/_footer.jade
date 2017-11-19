@@ -1,6 +1,6 @@
 footer.footer
   .footer__body
-    a.footer-title(id="author", href="/about", itemprop="author", itemscope, itemtype="http://schema.org/Person", itemref="authorImage")
+    a.footer-title(id="author", href="/", itemprop="author", itemscope, itemtype="http://schema.org/Person", itemref="authorImage")
       div(itemprop="name")
         .footer-title__text--first-name James
         | #{' '}
@@ -8,8 +8,7 @@ footer.footer
 
     ul.footer__link-list
       li.footer__link-item
-        a.footer__link--author(href="/about")
-          | About the author
+        a.footer__link--author(href="/")
           img.footer__link-image--author(id="authorImage", src="http://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=160", itemprop="image")
 
       li.footer__link-item

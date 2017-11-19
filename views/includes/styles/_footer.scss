@@ -19,6 +19,7 @@
     &-list {
       margin: 0;
       padding: 80px 0 0;
+      min-height: 50px;
       text-align: right;
 
       @media screen and (min-width: 550px) {
