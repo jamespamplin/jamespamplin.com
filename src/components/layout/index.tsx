@@ -2,28 +2,14 @@ import React from 'react'
 
 import { StyleSheet, css } from 'aphrodite/no-important'
 
-import {readFileSync} from 'fs'
+import { Header } from './header';
+import { Footer } from './footer';
 
 const cssPlaceholder = '/**data-aphrodite**/'
 
 export const injectCss = (cssContent: string, html: string) =>
   html.replace(cssPlaceholder, cssContent)
 
-const Header = () =>
-  <header>
-    <div className={css(styles.title)} itemProp="name">
-      <a className={css(styles.titleLink)} href="/" title="jamespamplin.com">
-        <span className={css(styles.titleText, styles.titleFirstName)}>James</span>
-        {' '}
-        <span className={css(styles.titleText, styles.titleLastName)}>Pamplin</span>
-      </a>
-    </div>
-  </header>
-
-const Footer = () =>
-  <footer>
-    <div>Footer</div>
-  </footer>
 
 export const withLayout = (pageTitle: string, Page: React.ReactElement<any>) =>
   <html className={css(styles.html)} lang="en">
@@ -41,22 +27,10 @@ export const withLayout = (pageTitle: string, Page: React.ReactElement<any>) =>
         <article itemProp="mainContentOfPage" itemScope itemType="http://schema.org/Article" itemRef="author">
           {Page}
         </article>
-        <Footer/>
       </div>
+      <Footer/>
     </body>
   </html>
-
-const fontBase64 = readFileSync(`${__dirname}/Raleway-subset.woff2`).toString('base64')
-const titleFontUrl = `data:application/font-woff2;base64,${fontBase64}`
-
-const titleFont = {
-  fontDisplay: 'swap',
-  fontFamily: 'Raleway',
-  fontStyle: 'normal',
-  fontWeight: 600,
-  src: `url('${titleFontUrl}') format('woff2')`,
-  unicodeRange: 'U+65,U+69-6a,U+6c-6e,U+70,U+73,U+20,U+61'
-}
 
 const styles = StyleSheet.create({
   html: {
@@ -66,40 +40,14 @@ const styles = StyleSheet.create({
 
   body: {
     backgroundColor: '#fff',
+    color: '#333',
+    fontFamily: 'Georgia, serif',
     fontSize: '1.6rem',
+    lineHeight: '1.5em',
     margin: 0,
-    padding: 0
-  },
-
-  title: {
-    fontFamily: [titleFont, 'sans-serif'],
-    fontSize: '6.4rem',
-    fontWeight: 600,
-    lineHeight: '1em',
-    height: '1.6em',
-    overflow: 'hidden',
-    margin: '0 0 4rem',
     padding: 0,
-    textTransform: 'lowercase',
-    letterSpacing: '-0.3rem'
-  },
-  titleLink: {
-    textDecoration: 'none'
-  },
-  titleText: {
-    display: 'block',
-    position: 'relative'
-  },
-  titleFirstName: {
-    color: '#927fbf',
-    top: '-0.3em',
-    textShadow: '0.025em 0.025em 0.025em #6e55a9'
-  },
-  titleLastName: {
-    color: '#271C48',
-    top: '-0.5em',
-    left: '0.2em',
-    textShadow: '0.025em 0.025em 0.025em #6448b8'
+    '-moz-osx-font-smoothing': 'grayscale',
+    '-webkit-font-smoothing': 'antialiased',
   },
 
   pageTitle: {
