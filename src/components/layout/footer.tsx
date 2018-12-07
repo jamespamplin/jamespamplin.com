@@ -1,5 +1,7 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite/no-important'
+
+import { Container } from './container';
 import { Title } from './title';
 
 const gravatarUrl = 'https://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=160'
@@ -12,7 +14,7 @@ const footerLinks: Array<{ title: string, url: string}> = [
 
 export const Footer = () =>
   <footer className={css(styles.footer)}>
-    <FooterContainer>
+    <Container>
       <FooterTitle />
       <FooterList>
         <FooterItem>
@@ -26,13 +28,8 @@ export const Footer = () =>
           </FooterItem>
         )}
       </FooterList>
-    </FooterContainer>
+    </Container>
   </footer>
-
-const FooterContainer = (props: { children: React.ReactNode }) =>
-  <div className={css(styles.footerContainer)}>
-    {props.children}
-  </div>
 
 const FooterTitle = () =>
   <Title styles={styles.title} firstNameStyles={styles.titleFirstName} lastNameStyles={styles.titleLastName} />
@@ -56,13 +53,6 @@ const styles = StyleSheet.create({
   footer: {
     backgroundColor: '#1D365D',
     marginTop: '2rem'
-  },
-
-  footerContainer: {
-    maxWidth: '100rem',
-    margin: '0 auto',
-    padding: '2rem',
-    position: 'relative'
   },
 
   title: {

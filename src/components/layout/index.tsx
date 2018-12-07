@@ -2,6 +2,7 @@ import React from 'react'
 
 import { StyleSheet, css } from 'aphrodite/no-important'
 
+import { Container } from './container';
 import { Header } from './header';
 import { Footer } from './footer';
 
@@ -21,13 +22,13 @@ export const withLayout = (pageTitle: string, Page: React.ReactElement<any>) =>
       <style data-aphrodite>{cssPlaceholder}</style>
     </head>
     <body className={css(styles.body)} itemScope itemType="http://schema.org/WebPage">
-      <div className={css(styles.container)}>
+      <Container>
         <Header/>
         <h1 className={css(styles.pageTitle)} itemProp="name">{pageTitle}</h1>
         <article itemProp="mainContentOfPage" itemScope itemType="http://schema.org/Article" itemRef="author">
           {Page}
         </article>
-      </div>
+      </Container>
       <Footer/>
     </body>
   </html>
@@ -56,12 +57,5 @@ const styles = StyleSheet.create({
     margin: '1.5rem 0 3rem',
     fontWeight: 'normal',
     lineHeight: '1em'
-  },
-
-  container: {
-    maxWidth: '100rem',
-    margin: '0 auto',
-    padding: '2rem',
-    position: 'relative'
   }
 })
