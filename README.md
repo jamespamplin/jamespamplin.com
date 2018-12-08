@@ -10,4 +10,4 @@ Use [`now`](https://now.sh) for deployment.
 ### Subfont
 Font subset used for headings generated with [subfont](https://www.npmjs.com/package/subfont):
 
-    subfont https://www.jamespamplin.com -o subfont
+    subfont https://jamespamplin.com -o subfont

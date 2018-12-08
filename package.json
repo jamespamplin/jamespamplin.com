@@ -3,9 +3,9 @@
   "author": {
     "name": "James Pamplin",
     "email": "james@jamespamplin.com",
-    "url": "https://www.jamespamplin.com"
+    "url": "https://jamespamplin.com"
   },
-  "homepage": "https://www.jamespamplin.com",
+  "homepage": "https://jamespamplin.com",
   "version": "3.0.0",
   "private": true,
   "scripts": {
