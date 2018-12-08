@@ -1,8 +1,8 @@
-import React from 'react'
 import {
-  StyleSheet as Aphrodite,
   SelectorHandler,
+  StyleSheet as Aphrodite,
 } from 'aphrodite/no-important'
+import React from 'react'
 
 export const Page = ({
   children,
@@ -43,10 +43,10 @@ const { StyleSheet, css } = Aphrodite.extend([
 const styles = StyleSheet.create({
   pageTitle: {
     fontSize: '4rem',
-    letterSpacing: '-0.1rem',
-    margin: '1.5rem 0 3rem',
     fontWeight: 'normal',
+    letterSpacing: '-0.1rem',
     lineHeight: '1em',
+    margin: '1.5rem 0 3rem',
   },
 
   content: {
@@ -64,10 +64,10 @@ const styles = StyleSheet.create({
 
     '& h2': {
       fontSize: '4rem',
-      letterSpacing: '-0.1rem',
-      margin: '1.5rem 0',
-      lineHeight: '1em',
       fontWeight: 'normal',
+      letterSpacing: '-0.1rem',
+      lineHeight: '1em',
+      margin: '1.5rem 0',
     },
   },
 })

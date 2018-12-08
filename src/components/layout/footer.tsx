@@ -1,5 +1,5 @@
+import { css, StyleSheet } from 'aphrodite/no-important'
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite/no-important'
 
 import { Container } from './container'
 import { Title } from './title'
@@ -71,8 +71,8 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: '4.8rem',
     float: 'left',
+    fontSize: '4.8rem',
     width: '18rem',
   },
   titleFirstName: {
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
 
   footerList: {
     margin: 0,
-    padding: '8rem 0 0',
     minHeight: '5rem',
+    padding: '8rem 0 0',
     textAlign: 'right',
 
     '@media screen and (min-width: 550px)': {
@@ -107,9 +107,9 @@ const styles = StyleSheet.create({
 
   footerAuthorImage: {
     borderRadius: '50%',
-    width: '8rem',
     position: 'absolute',
-    top: '1.5rem',
     right: '2rem',
+    top: '1.5rem',
+    width: '8rem',
   },
 })

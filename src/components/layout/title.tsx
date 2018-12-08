@@ -1,5 +1,5 @@
+import { css, StyleDeclarationValue, StyleSheet } from 'aphrodite/no-important'
 import React from 'react'
-import { StyleSheet, css, StyleDeclarationValue } from 'aphrodite/no-important'
 
 import { readFileSync } from 'fs'
 
@@ -52,12 +52,19 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: [titleFont, 'sans-serif'],
     fontWeight: 600,
-    lineHeight: '1em',
     height: '1.6em',
+    letterSpacing: '-0.3rem',
+    lineHeight: '1em',
     overflow: 'hidden',
     padding: 0,
     textTransform: 'lowercase',
-    letterSpacing: '-0.3rem',
+  },
+  titleFirstName: {
+    top: '-0.3em',
+  },
+  titleLastName: {
+    left: '0.2em',
+    top: '-0.5em',
   },
   titleLink: {
     textDecoration: 'none',
@@ -65,12 +72,5 @@ const styles = StyleSheet.create({
   titleText: {
     display: 'block',
     position: 'relative',
-  },
-  titleFirstName: {
-    top: '-0.3em',
-  },
-  titleLastName: {
-    top: '-0.5em',
-    left: '0.2em',
   },
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { StyleSheet, css } from 'aphrodite/no-important'
+import { css, StyleSheet } from 'aphrodite/no-important'
 import { readFileSync } from 'fs'
 import { withLayout } from '../../components/layout'
 

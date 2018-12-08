@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { StyleSheet, css } from 'aphrodite/no-important'
+import { css, StyleSheet } from 'aphrodite/no-important'
 
 import { Container } from './container'
-import { Header } from './header'
 import { Footer } from './footer'
+import { Header } from './header'
 import { Page } from './page'
 
 const cssPlaceholder = '/**data-aphrodite**/'
@@ -41,8 +41,8 @@ export const withLayout = (
 
 const styles = StyleSheet.create({
   html: {
-    fontSize: '62.5%', // reset to 10px for rems
     backgroundColor: '#111f36',
+    fontSize: '62.5%', // reset to 10px for rems
   },
 
   body: {
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     lineHeight: '1.5em',
     margin: 0,
     padding: 0,
+
     '-moz-osx-font-smoothing': 'grayscale',
     '-webkit-font-smoothing': 'antialiased',
   },

@@ -1,5 +1,5 @@
+import { css, StyleSheet } from 'aphrodite/no-important'
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite/no-important'
 import { Title } from './title'
 
 export const Header = () => (
