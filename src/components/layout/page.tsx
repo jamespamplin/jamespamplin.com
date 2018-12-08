@@ -1,27 +1,44 @@
 import React from 'react'
-import { StyleSheet as Aphrodite, SelectorHandler } from 'aphrodite/no-important'
+import {
+  StyleSheet as Aphrodite,
+  SelectorHandler,
+} from 'aphrodite/no-important'
 
-
-export const Page = ({ children, pageTitle }: { children: React.ReactNode, pageTitle: string }) =>
+export const Page = ({
+  children,
+  pageTitle,
+}: {
+  children: React.ReactNode
+  pageTitle: string
+}) => (
   <>
-    <h1 className={css(styles.pageTitle)} itemProp="headline">{pageTitle}</h1>
+    <h1 className={css(styles.pageTitle)} itemProp="headline">
+      {pageTitle}
+    </h1>
     <article className={css(styles.content)} itemProp="text">
       {children}
     </article>
   </>
+)
 
-const nestedStylesHandler: SelectorHandler = (selector, baseSelector, generateSubtreeStyles) => {
+const nestedStylesHandler: SelectorHandler = (
+  selector,
+  baseSelector,
+  generateSubtreeStyles
+) => {
   if (selector[0] === '&') {
-    const tag = selector.slice(2);
-    const nestedTag = generateSubtreeStyles(`${baseSelector} ${tag}`);
-    return nestedTag;
+    const tag = selector.slice(2)
+    const nestedTag = generateSubtreeStyles(`${baseSelector} ${tag}`)
+    return nestedTag
   }
-  return null;
+  return null
 }
 
-const { StyleSheet, css } = Aphrodite.extend([{
-  selectorHandler: nestedStylesHandler
-}])
+const { StyleSheet, css } = Aphrodite.extend([
+  {
+    selectorHandler: nestedStylesHandler,
+  },
+])
 
 const styles = StyleSheet.create({
   pageTitle: {
@@ -29,12 +46,12 @@ const styles = StyleSheet.create({
     letterSpacing: '-0.1rem',
     margin: '1.5rem 0 3rem',
     fontWeight: 'normal',
-    lineHeight: '1em'
+    lineHeight: '1em',
   },
 
   content: {
     '& a': {
-      color: '#6e55a9'
+      color: '#6e55a9',
     },
 
     '& p': {
@@ -42,7 +59,7 @@ const styles = StyleSheet.create({
 
       '@media screen and (max-width: 550px)': {
         marginRight: '1rem',
-      }
+      },
     },
 
     '& h2': {
@@ -51,6 +68,6 @@ const styles = StyleSheet.create({
       margin: '1.5rem 0',
       lineHeight: '1em',
       fontWeight: 'normal',
-    }
-  }
+    },
+  },
 })

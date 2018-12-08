@@ -1,11 +1,16 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite/no-important'
-import { Title } from './title';
+import { Title } from './title'
 
-export const Header = () =>
+export const Header = () => (
   <header>
-    <Title styles={styles.title} firstNameStyles={styles.titleFirstName} lastNameStyles={styles.titleLastName} />
+    <Title
+      styles={styles.title}
+      firstNameStyles={styles.titleFirstName}
+      lastNameStyles={styles.titleLastName}
+    />
   </header>
+)
 
 const styles = StyleSheet.create({
   title: {
@@ -14,10 +19,10 @@ const styles = StyleSheet.create({
   },
   titleFirstName: {
     color: '#927fbf',
-    textShadow: '0.025em 0.025em 0.025em #6e55a9'
+    textShadow: '0.025em 0.025em 0.025em #6e55a9',
   },
   titleLastName: {
     color: '#271C48',
-    textShadow: '0.025em 0.025em 0.025em #6448b8'
-  }
+    textShadow: '0.025em 0.025em 0.025em #6448b8',
+  },
 })

@@ -11,9 +11,15 @@
   "scripts": {
     "build": "ts-node src/build.tsx",
     "dev": "live-server dist",
+    "format": "prettier --write src/**/*.ts src/**/*.tsx",
     "now-build": "npm run build",
     "start": "concurrently npm:dev npm:watch",
     "watch": "nodemon -e ts,tsx -w src -x 'npm run build'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
   },
   "dependencies": {
     "aphrodite": "^2.2.3",
@@ -26,8 +32,10 @@
     "@types/react": "^16.7.11",
     "@types/react-dom": "^16.0.11",
     "concurrently": "^4.1.0",
+    "husky": "^1.2.0",
     "live-server": "^1.2.1",
     "nodemon": "^1.18.7",
+    "prettier": "1.15.3",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.1"
   }

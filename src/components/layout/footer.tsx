@@ -1,64 +1,79 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite/no-important'
 
-import { Container } from './container';
-import { Title } from './title';
+import { Container } from './container'
+import { Title } from './title'
 
-const gravatarUrl = 'https://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=160'
+const gravatarUrl =
+  'https://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=160'
 
-const footerLinks: Array<{ title: string, url: string}> = [
+const footerLinks: Array<{ title: string; url: string }> = [
   { title: 'Twitter', url: 'https://twitter.com/pampo' },
   { title: 'Github', url: 'https://github.com/jamespamplin' },
-  { title: 'Linkedin', url: 'https://www.linkedin.com/in/jamespamplin' }
+  { title: 'Linkedin', url: 'https://www.linkedin.com/in/jamespamplin' },
 ]
 
-export const Footer = () =>
-  <footer className={css(styles.footer)} itemProp="author" itemScope itemType="http://schema.org/Person">
+export const Footer = () => (
+  <footer
+    className={css(styles.footer)}
+    itemProp="author"
+    itemScope
+    itemType="http://schema.org/Person"
+  >
     <Container>
       <FooterTitle />
       <FooterList>
         <FooterItem>
           <FooterItemLink href="/">
-            <img className={css(styles.footerAuthorImage)} src={gravatarUrl} itemProp="image" />
+            <img
+              className={css(styles.footerAuthorImage)}
+              src={gravatarUrl}
+              itemProp="image"
+            />
           </FooterItemLink>
         </FooterItem>
-        {footerLinks.map(({ url, title }, index) =>
+        {footerLinks.map(({ url, title }, index) => (
           <FooterItem key={index}>
             <FooterItemLink href={url}>{title}</FooterItemLink>
           </FooterItem>
-        )}
+        ))}
       </FooterList>
     </Container>
   </footer>
+)
 
-const FooterTitle = () =>
-  <Title styles={styles.title} firstNameStyles={styles.titleFirstName} lastNameStyles={styles.titleLastName} />
+const FooterTitle = () => (
+  <Title
+    styles={styles.title}
+    firstNameStyles={styles.titleFirstName}
+    lastNameStyles={styles.titleLastName}
+  />
+)
 
-const FooterList = (props: { children: React.ReactNode }) =>
-  <ul className={css(styles.footerList)}>
-    {props.children}
-  </ul>
+const FooterList = (props: { children: React.ReactNode }) => (
+  <ul className={css(styles.footerList)}>{props.children}</ul>
+)
 
-const FooterItem = (props: { children: React.ReactNode }) =>
-  <li className={css(styles.footerItem)}>
-    {props.children}
-  </li>
+const FooterItem = (props: { children: React.ReactNode }) => (
+  <li className={css(styles.footerItem)}>{props.children}</li>
+)
 
-const FooterItemLink = (props: { children: React.ReactNode, href: string }) =>
+const FooterItemLink = (props: { children: React.ReactNode; href: string }) => (
   <a className={css(styles.footerItemLink)} href={props.href} itemProp="sameAs">
     {props.children}
   </a>
+)
 
 const styles = StyleSheet.create({
   footer: {
     backgroundColor: '#1D365D',
-    marginTop: '2rem'
+    marginTop: '2rem',
   },
 
   title: {
     fontSize: '4.8rem',
     float: 'left',
-    width: '18rem'
+    width: '18rem',
   },
   titleFirstName: {
     color: '#ecefe2',
@@ -75,12 +90,12 @@ const styles = StyleSheet.create({
 
     '@media screen and (min-width: 550px)': {
       padding: '2rem 10rem 0',
-    }
+    },
   },
 
   footerItem: {
     display: 'inline',
-    margin: 0
+    margin: 0,
   },
 
   footerItemLink: {
@@ -95,6 +110,6 @@ const styles = StyleSheet.create({
     width: '8rem',
     position: 'absolute',
     top: '1.5rem',
-    right: '2rem'
+    right: '2rem',
   },
 })
