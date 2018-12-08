@@ -22,7 +22,7 @@ export const withLayout = (pageTitle: string, PageContent: React.ReactElement<an
       <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
       <style data-aphrodite>{cssPlaceholder}</style>
     </head>
-    <body className={css(styles.body)} itemScope itemType="http://schema.org/WebPage">
+    <body id="about_page" className={css(styles.body)} itemScope itemType="http://schema.org/AboutPage">
       <Container>
         <Header/>
         <Page pageTitle={pageTitle}>

@@ -13,13 +13,13 @@ const footerLinks: Array<{ title: string, url: string}> = [
 ]
 
 export const Footer = () =>
-  <footer className={css(styles.footer)}>
+  <footer className={css(styles.footer)} itemProp="author" itemScope itemType="http://schema.org/Person">
     <Container>
       <FooterTitle />
       <FooterList>
         <FooterItem>
           <FooterItemLink href="/">
-            <img className={css(styles.footerAuthorImage)} src={gravatarUrl} />
+            <img className={css(styles.footerAuthorImage)} src={gravatarUrl} itemProp="image" />
           </FooterItemLink>
         </FooterItem>
         {footerLinks.map(({ url, title }, index) =>
@@ -45,7 +45,7 @@ const FooterItem = (props: { children: React.ReactNode }) =>
   </li>
 
 const FooterItemLink = (props: { children: React.ReactNode, href: string }) =>
-  <a className={css(styles.footerItemLink)} href={props.href}>
+  <a className={css(styles.footerItemLink)} href={props.href} itemProp="sameAs">
     {props.children}
   </a>
 

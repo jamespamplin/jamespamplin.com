@@ -4,8 +4,8 @@ import { StyleSheet as Aphrodite, SelectorHandler } from 'aphrodite/no-important
 
 export const Page = ({ children, pageTitle }: { children: React.ReactNode, pageTitle: string }) =>
   <>
-    <h1 className={css(styles.pageTitle)} itemProp="name">{pageTitle}</h1>
-    <article className={css(styles.content)} itemProp="mainContentOfPage" itemScope itemType="http://schema.org/Article" itemRef="author">
+    <h1 className={css(styles.pageTitle)} itemProp="headline">{pageTitle}</h1>
+    <article className={css(styles.content)} itemProp="text">
       {children}
     </article>
   </>
