@@ -11,6 +11,7 @@
   "scripts": {
     "build": "ts-node src/build.tsx",
     "dev": "live-server dist",
+    "now-build": "npm run build",
     "start": "concurrently npm:dev npm:watch",
     "watch": "nodemon -e ts,tsx -w src -x 'npm run build'"
   },
