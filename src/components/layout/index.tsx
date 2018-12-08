@@ -5,6 +5,7 @@ import { StyleSheet, css } from 'aphrodite/no-important'
 import { Container } from './container';
 import { Header } from './header';
 import { Footer } from './footer';
+import { Page } from './page';
 
 const cssPlaceholder = '/**data-aphrodite**/'
 
@@ -12,7 +13,7 @@ export const injectCss = (cssContent: string, html: string) =>
   html.replace(cssPlaceholder, cssContent)
 
 
-export const withLayout = (pageTitle: string, Page: React.ReactElement<any>) =>
+export const withLayout = (pageTitle: string, PageContent: React.ReactElement<any>) =>
   <html className={css(styles.html)} lang="en">
     <head>
       <title>{pageTitle} - jamespamplin.com</title>
@@ -24,10 +25,9 @@ export const withLayout = (pageTitle: string, Page: React.ReactElement<any>) =>
     <body className={css(styles.body)} itemScope itemType="http://schema.org/WebPage">
       <Container>
         <Header/>
-        <h1 className={css(styles.pageTitle)} itemProp="name">{pageTitle}</h1>
-        <article itemProp="mainContentOfPage" itemScope itemType="http://schema.org/Article" itemRef="author">
-          {Page}
-        </article>
+        <Page pageTitle={pageTitle}>
+          {PageContent}
+        </Page>
       </Container>
       <Footer/>
     </body>
@@ -49,13 +49,5 @@ const styles = StyleSheet.create({
     padding: 0,
     '-moz-osx-font-smoothing': 'grayscale',
     '-webkit-font-smoothing': 'antialiased',
-  },
-
-  pageTitle: {
-    fontSize: '4rem',
-    letterSpacing: '-0.1rem',
-    margin: '1.5rem 0 3rem',
-    fontWeight: 'normal',
-    lineHeight: '1em'
   }
 })
