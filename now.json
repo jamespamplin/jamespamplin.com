@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "alias": ["jamespamplin.com"],
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "regions": ["bru1"]
+}
