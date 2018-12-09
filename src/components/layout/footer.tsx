@@ -24,13 +24,7 @@ export const Footer = () => (
       <FooterTitle />
       <FooterList>
         <FooterItem>
-          <FooterItemLink href="/">
-            <img
-              className={css(styles.footerAuthorImage)}
-              src={gravatarUrl}
-              itemProp="image"
-            />
-          </FooterItemLink>
+          <FooterAvatar />
         </FooterItem>
         {footerLinks.map(({ url, title }, index) => (
           <FooterItem key={index}>
@@ -62,6 +56,17 @@ const FooterItemLink = (props: { children: React.ReactNode; href: string }) => (
   <a className={css(styles.footerItemLink)} href={props.href} itemProp="sameAs">
     {props.children}
   </a>
+)
+
+const FooterAvatar = () => (
+  <FooterItemLink href="/">
+    <img
+      className={css(styles.footerAuthorImage)}
+      src={gravatarUrl}
+      alt="Avatar for James Pamplin"
+      itemProp="image"
+    />
+  </FooterItemLink>
 )
 
 const styles = StyleSheet.create({
