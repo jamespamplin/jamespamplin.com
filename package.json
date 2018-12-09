@@ -9,7 +9,7 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "build": "ts-node src/build.tsx",
+    "build": "NODE_ENV=production ts-node src/build.tsx",
     "prebuild": "npm run lint",
     "dev": "live-server dist",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}'",
