@@ -12,6 +12,10 @@ After the Guardian, James started contracting and consulting with [Contino](http
 
 In 2017, James started a contract with [Zühlke Engineering](https://www.zuehlke.com), working with HSBC UK on their retail mobile banking app, and supporting micro-services. Primarily focussing on Delivery, improving the path to production. Involved working full-stack with TypeScript, Java, Jenkins, and Pivotal Cloud Foundry.
 
-Currently, James is working with [11:FS](https://11fs.com/) and [Capco](https://capco.com/) on a startup. Details to be released soon.
+Throughout 2018, James worked with [11:FS](https://11fs.com/) and [Capco](https://capco.com/) building [Mettle](https://mettle.co.uk/), a challenger bank for small to medium sized businesses. Involved working across most of their systems with React Native, NodeJS, AWS, Terraform, Kubernetes, and Concourse CI.
+
+James is currently the Head of Product Engineering at the [Ambassador Theatre Group](https://www.atgtickets.com/), building out their new Digital Platform across the whole live theatre experience.
 
 For more information on my Professional career, please contact me on [LinkedIn](https://www.linkedin.com/in/jamespamplin)
+
+Website built with [React](https://reactjs.org/), [Aphrodite](https://github.com/Khan/aphrodite), and [Typescript](https://www.typescriptlang.org/). Source code on [Github](https://github.com/jamespamplin/jamespamplin.com).
