@@ -10,16 +10,18 @@
   "private": true,
   "scripts": {
     "build": "ts-node src/build.tsx",
+    "prebuild": "npm run lint",
     "dev": "live-server dist",
-    "format": "prettier --write src/**/*.ts src/**/*.tsx",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}'",
     "lint": "tslint --project . --fix",
+    "prelint": "npm run format",
     "now-build": "npm run build",
     "start": "concurrently npm:dev npm:watch",
     "watch": "nodemon -e ts,tsx -w src -x 'npm run build'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format"
+      "pre-commit": "npm run lint"
     }
   },
   "dependencies": {
