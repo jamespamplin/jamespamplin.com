@@ -1,4 +1,4 @@
-import { css, StyleSheet } from 'aphrodite/no-important'
+import { StyleSheet } from 'aphrodite/no-important'
 import React from 'react'
 import { Title } from './title'
 
