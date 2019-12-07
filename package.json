@@ -25,24 +25,25 @@
     }
   },
   "dependencies": {
-    "aphrodite": "^2.2.3",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-markdown": "^4.0.4"
+    "aphrodite": "^2.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-markdown": "^4.2.2"
   },
   "devDependencies": {
-    "@types/node": "^10.12.11",
-    "@types/react": "^16.7.11",
-    "@types/react-dom": "^16.0.11",
-    "concurrently": "^4.1.0",
-    "husky": "^1.2.0",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.4",
+    "concurrently": "^5.0.0",
+    "fsevents": "^2.1.2",
+    "husky": "^3.1.0",
     "live-server": "^1.2.1",
-    "nodemon": "^1.18.7",
-    "prettier": "1.15.3",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.17.0",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.2.1"
+    "typescript": "^3.7.3"
   }
 }
