@@ -14,7 +14,7 @@ export const injectCss = (cssContent: string, html: string) =>
 
 export const withLayout = (
   pageTitle: string,
-  PageContent: React.ReactElement<any>
+  PageContent: React.ReactElement
 ) => (
   <html className={css(styles.html)} lang="en">
     <head>

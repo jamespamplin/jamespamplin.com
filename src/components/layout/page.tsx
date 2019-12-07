@@ -26,7 +26,7 @@ const nestedStylesHandler: SelectorHandler = (
   baseSelector,
   generateSubtreeStyles
 ) => {
-  if (selector[0] === '&') {
+  if (selector.startsWith('&')) {
     const tag = selector.slice(2)
     const nestedTag = generateSubtreeStyles(`${baseSelector} ${tag}`)
     return nestedTag

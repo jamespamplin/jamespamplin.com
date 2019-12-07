@@ -9,7 +9,7 @@ import { About } from './pages/about'
 
 const distDir = 'dist'
 
-const renderPage = (page: React.ReactElement<any>, filename: string) => {
+const renderPage = (page: React.ReactElement, filename: string) => {
   const path = `${distDir}/${filename}`
   const { css, html } = StyleSheetServer.renderStatic(() =>
     ReactDOMServer.renderToStaticMarkup(page)
@@ -20,7 +20,6 @@ const renderPage = (page: React.ReactElement<any>, filename: string) => {
   if (!existsSync(distDir)) mkdirSync(distDir)
   writeFileSync(path, output)
 
-  // tslint:disable-next-line
   console.log(`Written ${output.length} bytes to ${path}`)
 }
 
