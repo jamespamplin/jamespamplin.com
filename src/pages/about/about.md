@@ -14,7 +14,9 @@ In 2017, James started a contract with [Zühlke Engineering](https://www.zuehlke
 
 Throughout 2018, James worked with [11:FS](https://11fs.com/) and [Capco](https://capco.com/) building [Mettle](https://mettle.co.uk/), a challenger bank for small to medium sized businesses. Involved working across most of their systems with React Native, NodeJS, AWS, Terraform, Kubernetes, and Concourse CI.
 
-James is currently the Head of Product Engineering at the [Ambassador Theatre Group](https://www.atgtickets.com/), building out their new Digital Platform across the whole live theatre experience.
+From December 2018 to September 2019, James was the Head of Engineering at the [Ambassador Theatre Group](https://www.atgtickets.com/), building out their new Digital Platform across their theatre ticketing experience. Achievements included: growing the permanent engineering team from 4 to 11, and launching their new Website built with React, Node JS, AWS ECS, Cloudflare, Terraform, and GitLab CI. Transitioned the team to Serverless architecture utilising AWS Lambda and Cloudflare workers.
+
+Since November 2019, James has been working with [Stuffstr](https://www.stuffstr.com/) as a Lead Engineer, helping them grow their Engineering team, and building out their systems, providing a simplified buy-back process of used clothing, footware, and other goods from customers.
 
 For more information on my Professional career, please contact me on [LinkedIn](https://www.linkedin.com/in/jamespamplin)
 
