@@ -8,7 +8,7 @@ const gravatarUrl =
   'https://www.gravatar.com/avatar/eda794898bf1c746b1784bbb8870eb93.png?s=160'
 
 const footerLinks: Array<{ title: string; url: string }> = [
-  { title: 'Twitter', url: 'https://twitter.com/pampo' },
+  { title: 'Twitter', url: 'https://twitter.com/jamespamplin' },
   { title: 'Github', url: 'https://github.com/jamespamplin' },
   { title: 'Linkedin', url: 'https://www.linkedin.com/in/jamespamplin' },
 ]
