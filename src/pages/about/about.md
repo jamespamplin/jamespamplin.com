@@ -1,4 +1,4 @@
-Born in the small town of Forster, NSW Australia and now living in London, UK.
+Full-stack Software Engineer, Team Leader, and CTO. Specialising in Web Development, Product Delivery, Cloud Infrastructure, and Architectural Design.
 
 ## Career
 
