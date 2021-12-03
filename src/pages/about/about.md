@@ -1,6 +1,6 @@
-Born in the small town of Forster, NSW Australia and now living in London, UK. Keen interests in Web Development, Ethics, Culture, and Travel.
+Born in the small town of Forster, NSW Australia and now living in London, UK.
 
-## Development
+## Career
 
 James has worked in Web Development professionally since 2006, starting at [the University of Newcastle Australia](https://www.newcastle.edu.au/) working on the corporate Website in client side development, then moving to server-side Java EE development.
 
@@ -16,8 +16,16 @@ Throughout 2018, James worked with [11:FS](https://11fs.com/) and [Capco](https:
 
 From December 2018 to September 2019, James was the Head of Engineering at the [Ambassador Theatre Group](https://www.atgtickets.com/), building out their new Digital Platform across their theatre ticketing experience. Achievements included: growing the permanent engineering team from 4 to 11, and launching their new Website built with React, Node JS, AWS ECS, Cloudflare, Terraform, and GitLab CI. Transitioned the team to Serverless architecture utilising AWS Lambda and Cloudflare workers.
 
-Since November 2019, James has been working with [Stuffstr](https://www.stuffstr.com/) as a Lead Engineer, helping them grow their Engineering team, and building out their systems, providing a simplified buy-back process of used clothing, footware, and other goods from customers.
+November 2019 - June 2020, James worked with [Stuffstr](https://stuffstr.com) as a Lead Engineer, helping them grow their Engineering team, and building out their systems, which provided a simplified buy-back process for used clothing and footware for adidas Infinite Play. This included building an internal system for managing the warehouse for processing the used items when they were received, ready for resale.
 
-For more information on my Professional career, please contact me on [LinkedIn](https://www.linkedin.com/in/jamespamplin)
+In 2020, James started working with [LEBOM](https://lebom.app), a peer-to-peer betting app, as a CTO Consultant, building their MVP Mobile App and backend systems. This involved designing and building their systems and app from scratch, utilising distributed serverless infrastructure in AWS ready for scale, and React Native for the app. Typescript was used for both the backend and front-end, as well as GraphQL APIs.
+
+At the start of 2021, James Co-Founded [Sellalong](https://sellalong.com/) as CTO, a company focussed on ending consumer waste by making circularity a part of every purchase. This is achieved by partnering with Retailers and integrating directly into their eCommerce websites to provide their customers a seamless experience for instantly selling their unwanted purchases.
+
+## Contact
+
+Please contact me on [LinkedIn](https://www.linkedin.com/in/jamespamplin)
+
+## Website
 
 Website built with [React](https://reactjs.org/), [Aphrodite](https://github.com/Khan/aphrodite), and [Typescript](https://www.typescriptlang.org/). Source code on [Github](https://github.com/jamespamplin/jamespamplin.com).
