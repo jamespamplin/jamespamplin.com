@@ -4,7 +4,7 @@ Personal website.
 
 ## Deployment
 
-Use [`now`](https://now.sh) for deployment.
+Continuous deployment with [Vercel](https://vercel.com)
 
 ## Development
 

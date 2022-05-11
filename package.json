@@ -15,7 +15,6 @@
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}'",
     "lint": "concurrently npm:format npm:eslint npm:tsc",
     "eslint": "eslint --fix './src/**/*.ts*'",
-    "now-build": "npm run build",
     "start": "concurrently npm:dev npm:watch",
     "tsc": "tsc --noEmit",
     "watch": "nodemon -e ts,tsx,md -w src -x 'npm run build'",
