@@ -34,6 +34,7 @@ const nestedStylesHandler: SelectorHandler = (
   return null
 }
 
+/* eslint-disable */
 const { StyleSheet, css } = Aphrodite.extend([
   {
     selectorHandler: nestedStylesHandler,

@@ -6,45 +6,45 @@
     "url": "https://jamespamplin.com"
   },
   "homepage": "https://jamespamplin.com",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production ts-node src/build.tsx",
     "prebuild": "npm run lint",
     "dev": "live-server dist",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,md}'",
-    "lint": "eslint --fix './src/**/*.ts*'",
-    "prelint": "npm run format",
+    "lint": "concurrently npm:format npm:eslint npm:tsc",
+    "eslint": "eslint --fix './src/**/*.ts*'",
     "now-build": "npm run build",
     "start": "concurrently npm:dev npm:watch",
-    "watch": "nodemon -e ts,tsx,md -w src -x 'npm run build'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "tsc": "tsc --noEmit",
+    "watch": "nodemon -e ts,tsx,md -w src -x 'npm run build'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "aphrodite": "^2.4.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-markdown": "^4.2.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-markdown": "^6.0.3"
   },
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.15",
-    "@types/react-dom": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.10.0",
-    "@typescript-eslint/parser": "^2.10.0",
-    "concurrently": "^5.0.0",
-    "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.7.0",
+    "@types/node": "^14.18.17",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.17.0",
-    "husky": "^3.1.0",
-    "live-server": "^1.2.1",
+    "husky": "^8.0.0",
+    "live-server": "^1.1.0",
     "nodemon": "^2.0.1",
-    "prettier": "^1.19.1",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

@@ -7,4 +7,4 @@ import { withLayout } from '../../components/layout'
 const pageMarkdown = readFileSync(`${__dirname}/about.md`).toString()
 
 export const About = () =>
-  withLayout('About', <ReactMarkdown source={pageMarkdown} />)
+  withLayout('About', <ReactMarkdown>{pageMarkdown}</ReactMarkdown>)
