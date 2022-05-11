@@ -1,4 +1,7 @@
-Full-stack Software Engineer, Team Leader, and CTO. Specialising in Web Development, Product Delivery, Cloud Infrastructure, and Architectural Design.
+James is passionate about Circular Economy and Sustainability, now Co-Founder of Circular Way / Sellalong, James is working on proving Circularity models enabled by Technology, to lead towards a more sustainable future.
+
+Full-stack Software Engineer, Team Leader, and CTO.
+Specialising in Web Development, Product Delivery, Cloud Infrastructure, and Technical Architecture.
 
 ## Career
 
@@ -20,7 +23,7 @@ November 2019 - June 2020, James worked with [Stuffstr](https://stuffstr.com) as
 
 In 2020, James started working with [LEBOM](https://lebom.app), a peer-to-peer betting app, as a CTO Consultant, building their MVP Mobile App and backend systems. This involved designing and building their systems and app from scratch, utilising distributed serverless infrastructure in AWS ready for scale, and React Native for the app. Typescript was used for both the backend and front-end, as well as GraphQL APIs.
 
-At the start of 2021, James Co-Founded [Sellalong](https://sellalong.com/) as CTO, a company focussed on ending consumer waste by making circularity a part of every purchase. This is achieved by partnering with Retailers and integrating directly into their eCommerce websites to provide their customers a seamless experience for instantly selling their unwanted purchases.
+At the start of 2021, James Co-Founded [Sellalong](https://sellalong.com/) / [Circular Way](https://circularway.com/) as CTO, a company focussed on ending consumer waste by making circularity a part of every purchase. By partnering with Brands and integrating directly into their eCommerce websites, we provide their customers a fully Circular experience.
 
 ## Contact
 
@@ -28,4 +31,4 @@ Please contact me on [LinkedIn](https://www.linkedin.com/in/jamespamplin)
 
 ## Website
 
-Website built with [React](https://reactjs.org/), [Aphrodite](https://github.com/Khan/aphrodite), and [Typescript](https://www.typescriptlang.org/). Source code on [Github](https://github.com/jamespamplin/jamespamplin.com).
+Website built with [React](https://reactjs.org/), and [Typescript](https://www.typescriptlang.org/). Source code on [Github](https://github.com/jamespamplin/jamespamplin.com).
