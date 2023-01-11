@@ -37,7 +37,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.17.0",
     "husky": "^8.0.0",
-    "live-server": "^1.1.0",
+    "live-server": "^1.2.2",
     "nodemon": "^2.0.1",
     "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
