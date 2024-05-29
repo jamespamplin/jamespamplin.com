@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     letterSpacing: '-0.1rem',
     lineHeight: '1em',
-    margin: '1.5rem 0 3rem',
+    margin: '2.4rem 0 1.5rem',
   },
 
   content: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
       fontWeight: 'normal',
       letterSpacing: '-0.1rem',
       lineHeight: '1em',
-      margin: '1.5rem 0',
+      margin: '2.4rem 0 1.5rem',
     },
   },
 })

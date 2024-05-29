@@ -1,4 +1,4 @@
-import { StyleSheet } from 'aphrodite/no-important'
+import { StyleSheet, css } from 'aphrodite/no-important'
 import React from 'react'
 import { Title } from './title'
 
@@ -9,13 +9,20 @@ export const Header = () => (
       firstNameStyles={styles.titleFirstName}
       lastNameStyles={styles.titleLastName}
     />
+    <div className={css(styles.subtitle)}>
+      Founder | CTO | Software Engineer
+    </div>
   </header>
 )
 
 const styles = StyleSheet.create({
+  subtitle: {
+    fontSize: '2rem',
+    fontStyle: 'italic',
+  },
   title: {
     fontSize: '6.4rem',
-    margin: '0 0 4rem',
+    margin: '0 0 2rem',
   },
   titleFirstName: {
     color: '#927fbf',
