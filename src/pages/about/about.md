@@ -1,7 +1,6 @@
-James is passionate about Circular Economy and Sustainability, now Co-Founder of Circular Way / Sellalong, James is working on proving Circularity models enabled by Technology, to lead towards a more sustainable future.
-
-Full-stack Software Engineer, Team Leader, and CTO.
-Specialising in Web Development, Product Delivery, Cloud Infrastructure, and Technical Architecture.
+- Co-Founder, CTO of [Budee AI](https://budee.ai), and currently freelancing with [Circular Way](https://circularway.com/) and [LEBOM](https://lebom.app).
+- Full-stack Software Engineer, Team Leader, and CTO - specialised in Web and Mobile App Development, Product Delivery, Cloud Infrastructure, and Technical Architecture.
+- Passionate about Sustainability and Technology.
 
 ## Career
 
@@ -21,9 +20,11 @@ From December 2018 to September 2019, James was the Head of Engineering at the [
 
 November 2019 - June 2020, James worked with [Stuffstr](https://stuffstr.com) as a Lead Engineer, helping them grow their Engineering team, and building out their systems, which provided a simplified buy-back process for used clothing and footware for adidas Infinite Play. This included building an internal system for managing the warehouse for processing the used items when they were received, ready for resale.
 
-In 2020, James started working with [LEBOM](https://lebom.app), a peer-to-peer betting app, as a CTO Consultant, building their MVP Mobile App and backend systems. This involved designing and building their systems and app from scratch, utilising distributed serverless infrastructure in AWS ready for scale, and React Native for the app. Typescript was used for both the backend and front-end, as well as GraphQL APIs.
+In 2020, James started working with the founding team at the startup [LEBOM](https://lebom.app), a peer-to-peer betting app, as a CTO Consultant, building their MVP Mobile App and backend systems. This involved designing and building their systems and app from scratch, utilising distributed serverless infrastructure in AWS ready for scale, and React Native for the app. Typescript was used for both the backend and front-end, as well as GraphQL APIs.
 
-At the start of 2021, James Co-Founded [Sellalong](https://sellalong.com/) / [Circular Way](https://circularway.com/) as CTO, a company focussed on ending consumer waste by making circularity a part of every purchase. By partnering with Brands and integrating directly into their eCommerce websites, we provide their customers a fully Circular experience.
+At the start of 2021, James Co-Founded [Sellalong](https://sellalong.com/) / [Circular Way](https://circularway.com/) as CTO, a company focussed on ending consumer waste by making circularity a part of every purchase.
+
+In January 2024, James Co-Founded [Budee AI](https://budee.ai) as CTO, an AI Coach for wellbeing, productivity, and rapid business growth.
 
 ## Contact
 

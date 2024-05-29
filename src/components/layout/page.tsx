@@ -70,5 +70,13 @@ const styles = StyleSheet.create({
       lineHeight: '1em',
       margin: '2.4rem 0 1.5rem',
     },
+
+    '& li': {
+      margin: '0 8rem 1.2rem 0',
+
+      '@media screen and (max-width: 550px)': {
+        marginRight: '1rem',
+      },
+    },
   },
 })
